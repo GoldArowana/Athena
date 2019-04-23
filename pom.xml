@@ -13,6 +13,10 @@
         <module>athena-contract-thrift</module>
         <module>athena-client-thrift</module>
         <module>athena-service-thrift</module>
+        <module>athena-starter</module>
+        <module>athena-dal</module>
+        <module>athena-sal</module>
+        <module>athena-bll</module>
     </modules>
 
     <name>Athena</name>

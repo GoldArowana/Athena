@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>athena-client-thrift</artifactId>
+    <artifactId>athena-starter</artifactId>
 
-    <name>athena-client-thrift</name>
+    <name>athena-starter</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
