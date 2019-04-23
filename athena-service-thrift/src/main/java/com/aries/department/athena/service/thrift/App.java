@@ -1,4 +1,4 @@
-package com.aries.department;
+package com.aries.department.athena.service.thrift;
 
 /**
  * Hello world!
