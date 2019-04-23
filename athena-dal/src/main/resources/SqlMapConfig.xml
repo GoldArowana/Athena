@@ -15,6 +15,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/aries/department/athena/dal/StuMapper.xml"/>
+        <mapper resource="com/aries/department/athena/dal/mapper/StuMapper.xml"/>
     </mappers>
 </configuration>
