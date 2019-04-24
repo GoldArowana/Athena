@@ -1,30 +1,14 @@
 package com.aries.department.athena.dal.po;
 
+import lombok.Data;
+
+@Data
+//可以注解指定数据库名
+//@Table(name = "stu")
 public class Stu {
-    private int id;
+    private Integer id;
+
+    // 可以注解指定列名
+    // @Column(name = "name")
     private String name;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Stu{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }
