@@ -1,4 +1,4 @@
-package com.aries.department.athena.dal.config;
+package com.aries.department.athena.dal.util;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

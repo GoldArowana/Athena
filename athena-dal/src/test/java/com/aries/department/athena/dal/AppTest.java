@@ -1,7 +1,7 @@
-package com.aries.department;
+package com.aries.department.athena.dal;
 
 /**
- * Unit test for simple Main.
+ * Unit test for simple TkMapperTest.
  */
 public class AppTest {
 //    private SqlSession sqlSession;
