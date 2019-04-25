@@ -1,28 +1,18 @@
 package com.aries.department.athena.dal;
 
-import com.aries.department.athena.dal.config.ConfigurationUtil;
-import com.aries.department.athena.dal.config.SqlSessionFactoryUtil;
+import com.aries.department.athena.dal.util.SqlSessionUtil;
 import com.aries.department.athena.dal.mapper.StuMapper;
 import com.aries.department.athena.dal.po.Stu;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 import tk.mybatis.mapper.entity.Example;
-import tk.mybatis.mapper.session.Configuration;
-
-import java.io.IOException;
 
 /**
  * Hello world!
  */
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        try (SqlSession session = SqlSessionUtil.openSession("test")) {
 
-        Configuration tkConfiguration = ConfigurationUtil.getTkConfigurationByDBName("test");
-
-        // 根据tkConfiguration来获取SqlSessionFactory
-        SqlSessionFactory sessionFactory = SqlSessionFactoryUtil.getSqlSessionFactory(tkConfiguration);
-
-        try (SqlSession session = sessionFactory.openSession()) {
             // 获取Mapper
             StuMapper stuMapper = session.getMapper(StuMapper.class);
 

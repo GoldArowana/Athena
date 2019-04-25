@@ -1,4 +1,4 @@
-package com.aries.department.athena.dal.config;
+package com.aries.department.athena.dal.util;
 
 import com.aries.department.athena.core.utils.PropertiesProxy;
 import com.codahale.metrics.MetricRegistry;

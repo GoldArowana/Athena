@@ -1,4 +1,4 @@
-package com.aries.department.athena.dal.config;
+package com.aries.department.athena.dal.util;
 
 import org.apache.ibatis.session.Configuration;
 import tk.mybatis.mapper.common.Mapper;
