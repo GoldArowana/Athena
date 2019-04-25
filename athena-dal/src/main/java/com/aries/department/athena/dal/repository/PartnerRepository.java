@@ -57,4 +57,18 @@ public class PartnerRepository {
         }
     }
 
+    public static boolean checkPassword(String companyName, String password) {
+        Partner partner = new Partner();
+        partner.setCompanyName(companyName);
+        partner.setPassword(password);
+        try (SqlSession session = SqlSessionUtil.openSession(PARTNER_DB)) {
+            // 获取Mapper
+            PartnerMapper partnerMapper = session.getMapper(PartnerMapper.class);
+
+            int result = partnerMapper.selectCount(partner);
+
+            return result > 0;
+        }
+    }
+
 }

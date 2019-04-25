@@ -74,9 +74,16 @@ public class PartnerTest {
     @Test
     public void addPatnerTest() {
         Partner partner = new Partner();
-        partner.setCompanyId(5);
-        partner.setCompanyName("公司5");
+        partner.setCompanyId(6);
+        partner.setCompanyName("公司6");
         partner.setPassword("123123");
-        PartnerRepository.addPartner(partner);
+//        PartnerRepository.addPartner(partner);
     }
+
+    @Test
+    public void checkPasswordTest() {
+        boolean result = PartnerRepository.checkPassword("aries", "123456");
+        System.out.println(result);
+    }
+
 }
