@@ -24,6 +24,7 @@ create table athena_aries.staff
 	qq varchar(20) null,
 	wechat varchar(20) null,
 	job_level varchar(20) null comment '职级',
+	job_group int null comment '职位类别。如"后台开发"',
 	on_job tinyint(1) default 0 null comment '是否在职',
 	department_id int null comment '所属部门id',
 	country_id smallint(6) null comment '国家编码。',
