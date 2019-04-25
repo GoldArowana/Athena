@@ -16,17 +16,13 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        // 从SqlMapConfig.xml里读取配置。如果mybatis的xml名不是这个，那么需要修改SqlSessionFactoryUtil里的常量。
-        SqlSessionFactory factoryFromXml = SqlSessionFactoryUtil.getSqlSessionFactoryFromXml();
 
-        // 根据factoryFromXml获取tk的configuration。tk的configuration继承了mybatis的configuration。
-        Configuration tkConfiguration = ConfigurationUtil.getTkConfiguration(factoryFromXml);
+        Configuration tkConfiguration = ConfigurationUtil.getTkConfigurationByDBName("test");
 
         // 根据tkConfiguration来获取SqlSessionFactory
-        SqlSessionFactory sessionFactory = SqlSessionFactoryUtil.getSqlSessionFactoryFromTkConfiguration(tkConfiguration);
+        SqlSessionFactory sessionFactory = SqlSessionFactoryUtil.getSqlSessionFactory(tkConfiguration);
 
         try (SqlSession session = sessionFactory.openSession()) {
-
             // 获取Mapper
             StuMapper stuMapper = session.getMapper(StuMapper.class);
 

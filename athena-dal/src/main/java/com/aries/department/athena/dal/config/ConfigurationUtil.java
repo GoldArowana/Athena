@@ -1,21 +1,31 @@
 package com.aries.department.athena.dal.config;
 
-import org.apache.ibatis.session.SqlSessionFactory;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+import org.apache.ibatis.mapping.Environment;
+import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import tk.mybatis.mapper.session.Configuration;
 
-import java.util.Optional;
-
 public class ConfigurationUtil {
-    public static Configuration getTkConfiguration(SqlSessionFactory factoryFromXml) {
-// 新建一个configuration
-        tk.mybatis.mapper.session.Configuration configuration = new tk.mybatis.mapper.session.Configuration();
+
+    public static Configuration getTkConfigurationByDBName(String databaseName) {
+        // 新建一个configuration
+        Configuration configuration = new Configuration();
+
+        // 根据数据库名新建连接池配置
+        HikariConfig config = HikariConfigUtil.getHikariConfig(databaseName);
+
+        // 根据连接池配置新建连接池
+        HikariDataSource dataSource = new HikariDataSource(config);
+
         // 把SqlMapConfig.xml里的environment元素添加进来
-        configuration.setEnvironment(factoryFromXml.getConfiguration().getEnvironment());
+        configuration.setEnvironment(new Environment(databaseName, new JdbcTransactionFactory(), dataSource));
+
         // 把tk.mybatis的MapperHelper添加进来
-        configuration.setMapperHelper(TkMapperHelperUtil.getMapperHelper(factoryFromXml));
-        // 把SqlMapConfig.xml里的所有mapper，添加进来
-        Optional.ofNullable(factoryFromXml.getConfiguration().getMapperRegistry().getMappers()).get()
-                .forEach(configuration::addMapper);
+        configuration.setMapperHelper(TkMapperHelperUtil.getMapperHelper(configuration));
+
+        // 指定mapper的扫描路径
+        configuration.addMappers("com.aries.department.athena.dal.mapper");
 
         return configuration;
     }

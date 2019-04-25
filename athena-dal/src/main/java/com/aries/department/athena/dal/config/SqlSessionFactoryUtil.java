@@ -1,33 +1,24 @@
 package com.aries.department.athena.dal.config;
 
-import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import tk.mybatis.mapper.session.Configuration;
 
-import java.io.IOException;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class SqlSessionFactoryUtil {
-    private static final String MYBATIS_CONFIG_XML = "SqlMapConfig.xml";
+    private static Map<String, SqlSessionFactory> sqlSessionFactoryMap = new ConcurrentHashMap<>();
 
-    private static volatile SqlSessionFactory factoryFromXml;
-
-    public static SqlSessionFactory getSqlSessionFactoryFromXml() throws IOException {
-        if (factoryFromXml == null) {
-            synchronized (SqlSessionFactoryUtil.class) {
-                if (factoryFromXml == null) {
-                    SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-                    factoryFromXml = builder.build(Resources.getResourceAsStream(MYBATIS_CONFIG_XML));
-                    return factoryFromXml;
-                }
-            }
+    public static SqlSessionFactory getSqlSessionFactory(Configuration configuration) {
+        //
+        String databaseName = configuration.getEnvironment().getId();
+        if (!sqlSessionFactoryMap.containsKey(databaseName)) {
+            SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+            SqlSessionFactory sessionFactory = builder.build(configuration);
+            sqlSessionFactoryMap.putIfAbsent(databaseName, sessionFactory);
+            //新建的sessionFactory建议不要直接return出去。要统一使用sqlSessionFactoryMap.get(databaseName)
         }
-        return factoryFromXml;
-    }
-
-    public static SqlSessionFactory getSqlSessionFactoryFromTkConfiguration(Configuration tkConfiguration) {
-        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory sessionFactory = builder.build(tkConfiguration);
-        return sessionFactory;
+        return sqlSessionFactoryMap.get(databaseName);
     }
 }

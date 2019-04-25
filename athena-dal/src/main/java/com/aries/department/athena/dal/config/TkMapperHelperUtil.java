@@ -1,12 +1,12 @@
 package com.aries.department.athena.dal.config;
 
-import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.Configuration;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Config;
 import tk.mybatis.mapper.mapperhelper.MapperHelper;
 
 public class TkMapperHelperUtil {
-    public static MapperHelper getMapperHelper(SqlSessionFactory factoryFromXml) {
+    public static MapperHelper getMapperHelper(Configuration configuration) {
         //创建一个MapperHelper
         MapperHelper mapperHelper = new MapperHelper();
         //特殊配置
@@ -31,7 +31,7 @@ public class TkMapperHelperUtil {
         //4.0 之后的版本，如果类似 Mapper.class 这样的基础接口带有 @RegisterMapper 注解，就不必在这里注册
         mapperHelper.registerMapper(Mapper.class);
         //配置 mapperHelper 后，执行下面的操作
-        mapperHelper.processConfiguration(factoryFromXml.getConfiguration());
+        mapperHelper.processConfiguration(configuration);
 
         return mapperHelper;
     }
