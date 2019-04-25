@@ -11,7 +11,6 @@ public class TkMapperTest {
     @Test
     public void simpleTest() {
         try (SqlSession session = SqlSessionUtil.openSession("test")) {
-
             // 获取Mapper
             StuMapper stuMapper = session.getMapper(StuMapper.class);
 
