@@ -1,5 +1,6 @@
 package com.aries.department.athena.dal.util;
 
+import com.github.pagehelper.PageInterceptor;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.ibatis.mapping.Environment;
@@ -11,6 +12,8 @@ public class ConfigurationUtil {
     public static Configuration getTkConfigurationByDBName(String databaseName) {
         // 新建一个configuration
         Configuration configuration = new Configuration();
+
+        configuration.addInterceptor(new PageInterceptor());
 
         // 根据数据库名新建连接池配置
         HikariConfig config = HikariConfigUtil.getHikariConfig(databaseName);

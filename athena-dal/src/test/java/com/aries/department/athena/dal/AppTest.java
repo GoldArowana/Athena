@@ -15,7 +15,7 @@ public class AppTest {
 //
 //    @Test
 //    public void selectUserById2() throws IOException {
-//        StuMapper mapper = sqlSession.getMapper(StuMapper.class);
+//        PartnerMapper mapper = sqlSession.getMapper(PartnerMapper.class);
 //        Stu stu = mapper.getStuById(1);
 //        System.out.println(stu);
 //    }
