@@ -11,7 +11,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class DepartmentRepository {
-    // 添加部门
+    /**
+     * 添加部门
+     *
+     * @param database   数据库
+     * @param department 部门信息
+     * @return
+     */
     public static boolean addDepartment(String database, Department department) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
@@ -26,11 +32,11 @@ public class DepartmentRepository {
     /**
      * 根据id获取部门信息
      *
-     * @param database        数据库
+     * @param database     数据库
      * @param departmentId 主部门
      * @return 主部门对应的所有子部门
      */
-    public static Department getDepartment(String database, Integer departmentId) {
+    public static Department getDepartmentById(String database, Integer departmentId) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
