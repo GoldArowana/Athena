@@ -1,4 +1,4 @@
-package com.aries.department;
+package com.aries.department.athena.client.thrift;
 
 import org.junit.Test;
 
