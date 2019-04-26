@@ -15,23 +15,30 @@ public class ThriftServer {
 
     public void start() {
         try {
-            DepartmentService.Iface departmentService = new DepartmentServiceImpl();
-            DepartmentService.Processor departmentProcessor = new DepartmentService.Processor(departmentService);
-
-            StaffService.Iface staffService = new StaffServiceImpl();
-            StaffService.Processor staffProcessor = new StaffService.Processor(staffService);
-
             TMultiplexedProcessor processor = new TMultiplexedProcessor();
-            processor.registerProcessor("DepartmentService",departmentProcessor);
-            processor.registerProcessor("StaffService",staffProcessor);
 
+            { // 准备注册 DepartmentService
+                DepartmentService.Iface departmentService = new DepartmentServiceImpl();
+                DepartmentService.Processor departmentProcessor = new DepartmentService.Processor(departmentService);
+                processor.registerProcessor("DepartmentService", departmentProcessor);
+            }
+
+            { // 准备注册 StaffService
+                StaffService.Iface staffService = new StaffServiceImpl();
+                StaffService.Processor staffProcessor = new StaffService.Processor(staffService);
+                processor.registerProcessor("StaffService", staffProcessor);
+            }
+
+            // 从配置文件获取端口 6001
             PropertiesProxy propertiesProxy = new PropertiesProxy("athena-service.properties");
             int port = Integer.parseInt(propertiesProxy.readProperty("port"));
 
+            // 设置端口
             TServerTransport serverTransport = new TServerSocket(port);
             TServer server = new TSimpleServer(new TServer.Args(serverTransport).processor(processor));
             log.info("服务启动,端口:{}", port);
 
+            // 用新线程开启服务。
             new Thread(() -> {
                 try {
                     server.serve();
