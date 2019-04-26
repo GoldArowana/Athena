@@ -22,3 +22,10 @@ service DepartmentService {
 
    dto.AthenaResponse updateSupDepartmentById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId, 3:i32 supDepartmentId)
 }
+
+service StaffService {
+
+   //用于检测client-server之间通讯是否正常
+   string ping(),
+   string ping2()
+}
