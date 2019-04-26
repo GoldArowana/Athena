@@ -35,21 +35,21 @@ public class DepartmentRepositoryTest {
 
     @Test
     public void updateDepartmentNameTest() {
-        DepartmentRepository.updateDepartmentName("athena_aries", 4, "酒店后勤2组");
+        DepartmentRepository.updateDepartmentNameById("athena_aries", 4, "酒店后勤2组");
         Department department = DepartmentRepository.getDepartmentById("athena_aries", 4);
         System.out.println(department);
     }
 
     @Test
     public void updateDepartmentLeaderTest() {
-        DepartmentRepository.updateDepartmentLeader("athena_aries", 4, 1);
+        DepartmentRepository.updateDepartmentLeaderById("athena_aries", 4, 1);
         Department department = DepartmentRepository.getDepartmentById("athena_aries", 4);
         System.out.println(department);
     }
 
     @Test
     public void updateSupDepartmentTest() {
-        DepartmentRepository.updateSupDepartment("athena_aries", 2, 0);
+        DepartmentRepository.updateSupDepartmentById("athena_aries", 2, 0);
         Department department = DepartmentRepository.getDepartmentById("athena_aries", 2);
         System.out.println(department);
     }

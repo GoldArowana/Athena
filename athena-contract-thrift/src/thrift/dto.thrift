@@ -1,5 +1,10 @@
 namespace java com.aries.department.athena.contract.thrift.dto
 
+struct AthenaResponse{
+    1: i32 code,
+    2: string message
+}
+
 struct CompanyInfo {
     1: string name,
     2: string password,

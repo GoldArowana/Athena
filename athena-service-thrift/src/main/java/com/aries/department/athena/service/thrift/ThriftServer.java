@@ -11,11 +11,11 @@ import org.apache.thrift.transport.TServerTransport;
 @Slf4j
 public class ThriftServer {
 
-    private static DepartmentService.Iface service;
+    private  DepartmentService.Iface service;
 
-    private static DepartmentService.Processor processor;
+    private  DepartmentService.Processor processor;
 
-    public static void main(String[] args) {
+    public  void start() {
         try {
             service = new DepartmentServiceImpl();
             processor = new DepartmentService.Processor(service);
