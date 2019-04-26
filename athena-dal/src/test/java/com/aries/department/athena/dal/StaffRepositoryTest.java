@@ -10,10 +10,9 @@ public class StaffRepositoryTest {
     @Test
     public void addStaffTest() {
         Staff staff = new Staff();
-        staff.setFullname("小红");
-        staff.setGaeaId("xiaohong01");
+        staff.setFullname("金龙");
         staff.setSex(Short.valueOf("2"));
-        StaffRepository.addStaff("athena_aries", staff);
+        System.out.println(StaffRepository.addStaff("athena_aries", staff));
     }
 
     @Test
@@ -27,4 +26,11 @@ public class StaffRepositoryTest {
         List<Staff> staffByName = StaffRepository.getStaffByName("athena_aries", "小红");
         System.out.println(staffByName);
     }
+
+    @Test
+    public void getLastStaffBypinyinTest() {
+        Staff staff = StaffRepository.getLastStaffBypinyin("athena_aries", "xiaohong");
+        System.out.println(staff);
+    }
+
 }

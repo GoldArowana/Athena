@@ -1,21 +1,23 @@
 package com.aries.department.athena.dal;
 
-import net.sourceforge.pinyin4j.PinyinHelper;
-import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
-import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
-import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
-import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+import org.junit.Assert;
 import org.junit.Test;
+
+import static com.aries.department.athena.core.utils.PinyinUtil.toPinyin;
 
 public class PinyinTest {
     @Test
-    public void pinyinTest() throws BadHanyuPinyinOutputFormatCombination {
-        //设置汉子拼音输出的格式
-        HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
-        format.setCaseType(HanyuPinyinCaseType.LOWERCASE);
-        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
-        format.setVCharType(HanyuPinyinVCharType.WITH_V);
-        System.out.println(PinyinHelper.toHanyuPinyinStringArray('你', format)[0]);
+    public void pinyinTestWithoutFilter() throws BadHanyuPinyinOutputFormatCombination {
+        String pinyin = toPinyin("哈哈1a2b", false);
+        Assert.assertEquals(pinyin, "haha1a2b");
+        System.out.println(pinyin);
+    }
+
+    @Test
+    public void pinyinTestWithFilter() throws BadHanyuPinyinOutputFormatCombination {
+        String pinyin = toPinyin("哈哈1a2b", true);
+        Assert.assertEquals(pinyin, "haha");
+        System.out.println(pinyin);
     }
 }
