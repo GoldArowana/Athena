@@ -1,6 +1,5 @@
 package com.aries.department.athena.dal.po;
 
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Id;

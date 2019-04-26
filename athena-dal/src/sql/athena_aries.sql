@@ -1,19 +1,15 @@
-CREATE DATABASE `athena_aries`; /* 创建数据库 */
-
-
--- auto-generated definition
+CREATE DATABASE `athena_aries` character set utf8mb4;
+use `athena_aries`;
 create table department
 (
-    id              int auto_increment comment '部门id'
-        primary key,
-    department_name varchar(100) null,
-    leader_id       int          null comment '部门管理者，部长',
-    up_id           int          null comment '上级部门id'
+	id int auto_increment comment '部门id'
+		primary key,
+	department_name varchar(100) null,
+	leader_id int default 0 null comment '部门管理者，部长',
+	up_id int default 0 null comment '上级部门id'
 );
 
-
-
-create table athena_aries.staff
+create table staff
 (
 	id int null,
 	fullname varchar(20) null comment '全名',
@@ -40,5 +36,5 @@ create table athena_aries.staff
 comment '员工信息';
 
 create index staff_gaea_id_index
-	on athena_aries.staff (gaea_id);
+	on staff (gaea_id);
 

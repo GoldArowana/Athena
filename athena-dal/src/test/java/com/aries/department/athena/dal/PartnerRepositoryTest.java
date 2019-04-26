@@ -12,7 +12,7 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
-public class PartnerTest {
+public class PartnerRepositoryTest {
     @Test
     public void selectTest() {
         try (SqlSession session = SqlSessionUtil.openSession("athena")) {

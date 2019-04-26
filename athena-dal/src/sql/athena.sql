@@ -1,6 +1,6 @@
 
 CREATE DATABASE `athena` character set utf8mb4;
-
+use `athena`;
 create table partner
 (
 	id int auto_increment

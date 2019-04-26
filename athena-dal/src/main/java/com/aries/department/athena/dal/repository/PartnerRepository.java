@@ -71,4 +71,11 @@ public class PartnerRepository {
         }
     }
 
+    public static boolean checkPassword(Partner partner) {
+        if (partner == null) {
+            return false;
+        }
+        return checkPassword(partner.getCompanyName(), partner.getPassword());
+    }
+
 }

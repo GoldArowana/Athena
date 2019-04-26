@@ -6,3 +6,4 @@
 **/*.out
 **/*.versionsBackup
 **/database.properties
+**/out

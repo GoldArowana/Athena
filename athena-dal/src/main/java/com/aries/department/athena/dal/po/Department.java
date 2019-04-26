@@ -1,11 +1,14 @@
 package com.aries.department.athena.dal.po;
 
+import lombok.Data;
+
 import javax.persistence.Id;
 
+@Data
 public class Department {
     @Id
     private Integer id;
-    private String department_name;
-    private Integer leader_id; //部门管理者，部长,
-    private Integer up_id; //上级部门id
+    private String departmentName;
+    private Integer leaderId; //部门管理者，部长,
+    private Integer upId; //上级部门id
 }

@@ -3,18 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-<!--    <properties resource="hikari.properties"/>-->
-<!--    <environments default="development">-->
-<!--        <environment id="development">-->
-<!--            <transactionManager type="JDBC" />-->
-<!--            <dataSource type="com.aries.department.athena.dal.datasource.HikariCPDataSourceFactory" >-->
-<!--                <property name="jdbcUrl" value="${jdbcUrl}" />-->
-<!--                <property name="username" value="${username}" />-->
-<!--                <property name="password" value="${password}" />-->
-<!--            </dataSource>-->
-<!--        </environment>-->
-<!--    </environments>-->
-<!--    <mappers>-->
-<!--        <package name="com.aries.department.athena.dal.mapper"/>-->
-<!--    </mappers>-->
+    <!--    <properties resource="hikari.properties"/>-->
+    <!--    <environments default="development">-->
+    <!--        <environment id="development">-->
+    <!--            <transactionManager type="JDBC" />-->
+    <!--            <dataSource type="com.aries.department.athena.dal.datasource.HikariCPDataSourceFactory" >-->
+    <!--                <property name="jdbcUrl" value="${jdbcUrl}" />-->
+    <!--                <property name="username" value="${username}" />-->
+    <!--                <property name="password" value="${password}" />-->
+    <!--            </dataSource>-->
+    <!--        </environment>-->
+    <!--    </environments>-->
+    <!--    <mappers>-->
+    <!--        <package name="com.aries.department.athena.dal.mapper"/>-->
+    <!--    </mappers>-->
 </configuration>
