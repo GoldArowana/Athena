@@ -34,7 +34,7 @@
             <url>https://raw.github.com/goldarowana/maven-repo/master/</url>
             <snapshots>
                 <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
+                <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
     </repositories>
