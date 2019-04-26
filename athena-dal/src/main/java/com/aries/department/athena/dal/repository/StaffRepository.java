@@ -12,6 +12,7 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.Collections;
 import java.util.List;
 
 public class StaffRepository {
@@ -90,6 +91,30 @@ public class StaffRepository {
             List<Staff> staff = staffMapper.selectByExample(example);
 
             return staff;
+        }
+    }
+
+    /**
+     * 根据员工姓名获取员工信息
+     *
+     * @param database 数据库名
+     * @param pinyin   员工名拼音
+     * @return 员工信息。List。
+     */
+    public static List<Staff> getStaffByPinyin(String database, String pinyin) {
+        try (SqlSession session = SqlSessionUtil.openSession(database)) {
+            // 获取Mapper
+            StaffMapper staffMapper = session.getMapper(StaffMapper.class);
+            Example example = new Example(Staff.class);
+            example.createCriteria().andLike("gaeaId", pinyin + "%");
+            List<Staff> staffList = staffMapper.selectByExample(example);
+
+            // 防止返回null
+            if (CollectionUtils.isEmpty(staffList)) {
+                return Collections.emptyList();
+            }
+
+            return staffList;
         }
     }
 
