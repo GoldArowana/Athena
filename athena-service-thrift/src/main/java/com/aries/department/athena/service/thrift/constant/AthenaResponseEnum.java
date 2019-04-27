@@ -6,7 +6,7 @@ public enum AthenaResponseEnum {
     NO_PERMISION(1001, "没有访问权限"),
     SUCCESS(3000, "success"),
     NOT_CHANGED(3001, "no changed"),
-    ERROR(4000,"系统错误");
+    ERROR(4000, "系统错误");
 
     private int code;
     private String message;
