@@ -15,17 +15,17 @@ public class StaffService {
 
         public java.lang.String ping() throws org.apache.thrift.TException;
 
-        public com.aries.department.athena.contract.thrift.dto.AthenaResponse addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff) throws org.apache.thrift.TException;
+        public com.aries.department.athena.contract.thrift.dto.AthenaResponse addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) throws org.apache.thrift.TException;
 
-        public com.aries.department.athena.contract.thrift.dto.Staff getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id) throws org.apache.thrift.TException;
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id) throws org.apache.thrift.TException;
 
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name) throws org.apache.thrift.TException;
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name) throws org.apache.thrift.TException;
 
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException;
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException;
 
-        public com.aries.department.athena.contract.thrift.dto.Staff getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException;
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException;
 
-        public com.aries.department.athena.contract.thrift.dto.AthenaResponse updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff) throws org.apache.thrift.TException;
+        public com.aries.department.athena.contract.thrift.dto.AthenaResponse updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) throws org.apache.thrift.TException;
 
     }
 
@@ -33,17 +33,17 @@ public class StaffService {
 
         public void ping(org.apache.thrift.async.AsyncMethodCallback<java.lang.String> resultHandler) throws org.apache.thrift.TException;
 
-        public void addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException;
+        public void addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException;
 
-        public void getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler) throws org.apache.thrift.TException;
+        public void getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler) throws org.apache.thrift.TException;
 
-        public void getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler) throws org.apache.thrift.TException;
+        public void getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler) throws org.apache.thrift.TException;
 
-        public void getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler) throws org.apache.thrift.TException;
+        public void getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler) throws org.apache.thrift.TException;
 
-        public void getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler) throws org.apache.thrift.TException;
+        public void getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler) throws org.apache.thrift.TException;
 
-        public void updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException;
+        public void updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException;
 
     }
 
@@ -88,15 +88,15 @@ public class StaffService {
             throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "ping failed: unknown result");
         }
 
-        public com.aries.department.athena.contract.thrift.dto.AthenaResponse addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff) throws org.apache.thrift.TException {
-            send_addStaff(companyInfo, staff);
+        public com.aries.department.athena.contract.thrift.dto.AthenaResponse addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) throws org.apache.thrift.TException {
+            send_addStaff(companyInfo, staffInfo);
             return recv_addStaff();
         }
 
-        public void send_addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff) throws org.apache.thrift.TException {
+        public void send_addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) throws org.apache.thrift.TException {
             addStaff_args args = new addStaff_args();
             args.setCompanyInfo(companyInfo);
-            args.setStaff(staff);
+            args.setStaffInfo(staffInfo);
             sendBase("addStaff", args);
         }
 
@@ -109,7 +109,7 @@ public class StaffService {
             throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "addStaff failed: unknown result");
         }
 
-        public com.aries.department.athena.contract.thrift.dto.Staff getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id) throws org.apache.thrift.TException {
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id) throws org.apache.thrift.TException {
             send_getStaffById(companyInfo, id);
             return recv_getStaffById();
         }
@@ -121,7 +121,7 @@ public class StaffService {
             sendBase("getStaffById", args);
         }
 
-        public com.aries.department.athena.contract.thrift.dto.Staff recv_getStaffById() throws org.apache.thrift.TException {
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo recv_getStaffById() throws org.apache.thrift.TException {
             getStaffById_result result = new getStaffById_result();
             receiveBase(result, "getStaffById");
             if (result.isSetSuccess()) {
@@ -130,7 +130,7 @@ public class StaffService {
             throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "getStaffById failed: unknown result");
         }
 
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name) throws org.apache.thrift.TException {
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name) throws org.apache.thrift.TException {
             send_getStaffByName(companyInfo, name);
             return recv_getStaffByName();
         }
@@ -142,7 +142,7 @@ public class StaffService {
             sendBase("getStaffByName", args);
         }
 
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> recv_getStaffByName() throws org.apache.thrift.TException {
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> recv_getStaffByName() throws org.apache.thrift.TException {
             getStaffByName_result result = new getStaffByName_result();
             receiveBase(result, "getStaffByName");
             if (result.isSetSuccess()) {
@@ -151,7 +151,7 @@ public class StaffService {
             throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "getStaffByName failed: unknown result");
         }
 
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException {
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException {
             send_getStaffByPinyin(companyInfo, pinyin);
             return recv_getStaffByPinyin();
         }
@@ -163,7 +163,7 @@ public class StaffService {
             sendBase("getStaffByPinyin", args);
         }
 
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> recv_getStaffByPinyin() throws org.apache.thrift.TException {
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> recv_getStaffByPinyin() throws org.apache.thrift.TException {
             getStaffByPinyin_result result = new getStaffByPinyin_result();
             receiveBase(result, "getStaffByPinyin");
             if (result.isSetSuccess()) {
@@ -172,7 +172,7 @@ public class StaffService {
             throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "getStaffByPinyin failed: unknown result");
         }
 
-        public com.aries.department.athena.contract.thrift.dto.Staff getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException {
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin) throws org.apache.thrift.TException {
             send_getLastStaffBypinyin(companyInfo, pinyin);
             return recv_getLastStaffBypinyin();
         }
@@ -184,7 +184,7 @@ public class StaffService {
             sendBase("getLastStaffBypinyin", args);
         }
 
-        public com.aries.department.athena.contract.thrift.dto.Staff recv_getLastStaffBypinyin() throws org.apache.thrift.TException {
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo recv_getLastStaffBypinyin() throws org.apache.thrift.TException {
             getLastStaffBypinyin_result result = new getLastStaffBypinyin_result();
             receiveBase(result, "getLastStaffBypinyin");
             if (result.isSetSuccess()) {
@@ -193,15 +193,15 @@ public class StaffService {
             throw new org.apache.thrift.TApplicationException(org.apache.thrift.TApplicationException.MISSING_RESULT, "getLastStaffBypinyin failed: unknown result");
         }
 
-        public com.aries.department.athena.contract.thrift.dto.AthenaResponse updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff) throws org.apache.thrift.TException {
-            send_updateStaffById(companyInfo, staff);
+        public com.aries.department.athena.contract.thrift.dto.AthenaResponse updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) throws org.apache.thrift.TException {
+            send_updateStaffById(companyInfo, staffInfo);
             return recv_updateStaffById();
         }
 
-        public void send_updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff) throws org.apache.thrift.TException {
+        public void send_updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) throws org.apache.thrift.TException {
             updateStaffById_args args = new updateStaffById_args();
             args.setCompanyInfo(companyInfo);
-            args.setStaff(staff);
+            args.setStaffInfo(staffInfo);
             sendBase("updateStaffById", args);
         }
 
@@ -264,28 +264,28 @@ public class StaffService {
             }
         }
 
-        public void addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException {
+        public void addStaff(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException {
             checkReady();
-            addStaff_call method_call = new addStaff_call(companyInfo, staff, resultHandler, this, ___protocolFactory, ___transport);
+            addStaff_call method_call = new addStaff_call(companyInfo, staffInfo, resultHandler, this, ___protocolFactory, ___transport);
             this.___currentMethod = method_call;
             ___manager.call(method_call);
         }
 
         public static class addStaff_call extends org.apache.thrift.async.TAsyncMethodCall<com.aries.department.athena.contract.thrift.dto.AthenaResponse> {
             private com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo;
-            private com.aries.department.athena.contract.thrift.dto.Staff staff;
+            private com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo;
 
-            public addStaff_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+            public addStaff_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
                 super(client, protocolFactory, transport, resultHandler, false);
                 this.companyInfo = companyInfo;
-                this.staff = staff;
+                this.staffInfo = staffInfo;
             }
 
             public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
                 prot.writeMessageBegin(new org.apache.thrift.protocol.TMessage("addStaff", org.apache.thrift.protocol.TMessageType.CALL, 0));
                 addStaff_args args = new addStaff_args();
                 args.setCompanyInfo(companyInfo);
-                args.setStaff(staff);
+                args.setStaffInfo(staffInfo);
                 args.write(prot);
                 prot.writeMessageEnd();
             }
@@ -300,18 +300,18 @@ public class StaffService {
             }
         }
 
-        public void getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler) throws org.apache.thrift.TException {
+        public void getStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler) throws org.apache.thrift.TException {
             checkReady();
             getStaffById_call method_call = new getStaffById_call(companyInfo, id, resultHandler, this, ___protocolFactory, ___transport);
             this.___currentMethod = method_call;
             ___manager.call(method_call);
         }
 
-        public static class getStaffById_call extends org.apache.thrift.async.TAsyncMethodCall<com.aries.department.athena.contract.thrift.dto.Staff> {
+        public static class getStaffById_call extends org.apache.thrift.async.TAsyncMethodCall<com.aries.department.athena.contract.thrift.dto.StaffInfo> {
             private com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo;
             private int id;
 
-            public getStaffById_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+            public getStaffById_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, int id, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
                 super(client, protocolFactory, transport, resultHandler, false);
                 this.companyInfo = companyInfo;
                 this.id = id;
@@ -326,7 +326,7 @@ public class StaffService {
                 prot.writeMessageEnd();
             }
 
-            public com.aries.department.athena.contract.thrift.dto.Staff getResult() throws org.apache.thrift.TException {
+            public com.aries.department.athena.contract.thrift.dto.StaffInfo getResult() throws org.apache.thrift.TException {
                 if (getState() != org.apache.thrift.async.TAsyncMethodCall.State.RESPONSE_READ) {
                     throw new java.lang.IllegalStateException("Method call not finished!");
                 }
@@ -336,18 +336,18 @@ public class StaffService {
             }
         }
 
-        public void getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler) throws org.apache.thrift.TException {
+        public void getStaffByName(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler) throws org.apache.thrift.TException {
             checkReady();
             getStaffByName_call method_call = new getStaffByName_call(companyInfo, name, resultHandler, this, ___protocolFactory, ___transport);
             this.___currentMethod = method_call;
             ___manager.call(method_call);
         }
 
-        public static class getStaffByName_call extends org.apache.thrift.async.TAsyncMethodCall<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> {
+        public static class getStaffByName_call extends org.apache.thrift.async.TAsyncMethodCall<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> {
             private com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo;
             private java.lang.String name;
 
-            public getStaffByName_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+            public getStaffByName_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String name, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
                 super(client, protocolFactory, transport, resultHandler, false);
                 this.companyInfo = companyInfo;
                 this.name = name;
@@ -362,7 +362,7 @@ public class StaffService {
                 prot.writeMessageEnd();
             }
 
-            public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getResult() throws org.apache.thrift.TException {
+            public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getResult() throws org.apache.thrift.TException {
                 if (getState() != org.apache.thrift.async.TAsyncMethodCall.State.RESPONSE_READ) {
                     throw new java.lang.IllegalStateException("Method call not finished!");
                 }
@@ -372,18 +372,18 @@ public class StaffService {
             }
         }
 
-        public void getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler) throws org.apache.thrift.TException {
+        public void getStaffByPinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler) throws org.apache.thrift.TException {
             checkReady();
             getStaffByPinyin_call method_call = new getStaffByPinyin_call(companyInfo, pinyin, resultHandler, this, ___protocolFactory, ___transport);
             this.___currentMethod = method_call;
             ___manager.call(method_call);
         }
 
-        public static class getStaffByPinyin_call extends org.apache.thrift.async.TAsyncMethodCall<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> {
+        public static class getStaffByPinyin_call extends org.apache.thrift.async.TAsyncMethodCall<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> {
             private com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo;
             private java.lang.String pinyin;
 
-            public getStaffByPinyin_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+            public getStaffByPinyin_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
                 super(client, protocolFactory, transport, resultHandler, false);
                 this.companyInfo = companyInfo;
                 this.pinyin = pinyin;
@@ -398,7 +398,7 @@ public class StaffService {
                 prot.writeMessageEnd();
             }
 
-            public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getResult() throws org.apache.thrift.TException {
+            public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getResult() throws org.apache.thrift.TException {
                 if (getState() != org.apache.thrift.async.TAsyncMethodCall.State.RESPONSE_READ) {
                     throw new java.lang.IllegalStateException("Method call not finished!");
                 }
@@ -408,18 +408,18 @@ public class StaffService {
             }
         }
 
-        public void getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler) throws org.apache.thrift.TException {
+        public void getLastStaffBypinyin(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler) throws org.apache.thrift.TException {
             checkReady();
             getLastStaffBypinyin_call method_call = new getLastStaffBypinyin_call(companyInfo, pinyin, resultHandler, this, ___protocolFactory, ___transport);
             this.___currentMethod = method_call;
             ___manager.call(method_call);
         }
 
-        public static class getLastStaffBypinyin_call extends org.apache.thrift.async.TAsyncMethodCall<com.aries.department.athena.contract.thrift.dto.Staff> {
+        public static class getLastStaffBypinyin_call extends org.apache.thrift.async.TAsyncMethodCall<com.aries.department.athena.contract.thrift.dto.StaffInfo> {
             private com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo;
             private java.lang.String pinyin;
 
-            public getLastStaffBypinyin_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+            public getLastStaffBypinyin_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, java.lang.String pinyin, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
                 super(client, protocolFactory, transport, resultHandler, false);
                 this.companyInfo = companyInfo;
                 this.pinyin = pinyin;
@@ -434,7 +434,7 @@ public class StaffService {
                 prot.writeMessageEnd();
             }
 
-            public com.aries.department.athena.contract.thrift.dto.Staff getResult() throws org.apache.thrift.TException {
+            public com.aries.department.athena.contract.thrift.dto.StaffInfo getResult() throws org.apache.thrift.TException {
                 if (getState() != org.apache.thrift.async.TAsyncMethodCall.State.RESPONSE_READ) {
                     throw new java.lang.IllegalStateException("Method call not finished!");
                 }
@@ -444,28 +444,28 @@ public class StaffService {
             }
         }
 
-        public void updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException {
+        public void updateStaffById(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException {
             checkReady();
-            updateStaffById_call method_call = new updateStaffById_call(companyInfo, staff, resultHandler, this, ___protocolFactory, ___transport);
+            updateStaffById_call method_call = new updateStaffById_call(companyInfo, staffInfo, resultHandler, this, ___protocolFactory, ___transport);
             this.___currentMethod = method_call;
             ___manager.call(method_call);
         }
 
         public static class updateStaffById_call extends org.apache.thrift.async.TAsyncMethodCall<com.aries.department.athena.contract.thrift.dto.AthenaResponse> {
             private com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo;
-            private com.aries.department.athena.contract.thrift.dto.Staff staff;
+            private com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo;
 
-            public updateStaffById_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.Staff staff, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+            public updateStaffById_call(com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo, com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
                 super(client, protocolFactory, transport, resultHandler, false);
                 this.companyInfo = companyInfo;
-                this.staff = staff;
+                this.staffInfo = staffInfo;
             }
 
             public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
                 prot.writeMessageBegin(new org.apache.thrift.protocol.TMessage("updateStaffById", org.apache.thrift.protocol.TMessageType.CALL, 0));
                 updateStaffById_args args = new updateStaffById_args();
                 args.setCompanyInfo(companyInfo);
-                args.setStaff(staff);
+                args.setStaffInfo(staffInfo);
                 args.write(prot);
                 prot.writeMessageEnd();
             }
@@ -549,7 +549,7 @@ public class StaffService {
 
             public addStaff_result getResult(I iface, addStaff_args args) throws org.apache.thrift.TException {
                 addStaff_result result = new addStaff_result();
-                result.success = iface.addStaff(args.companyInfo, args.staff);
+                result.success = iface.addStaff(args.companyInfo, args.staffInfo);
                 return result;
             }
         }
@@ -674,7 +674,7 @@ public class StaffService {
 
             public updateStaffById_result getResult(I iface, updateStaffById_args args) throws org.apache.thrift.TException {
                 updateStaffById_result result = new updateStaffById_result();
-                result.success = iface.updateStaffById(args.companyInfo, args.staff);
+                result.success = iface.updateStaffById(args.companyInfo, args.staffInfo);
                 return result;
             }
         }
@@ -823,11 +823,11 @@ public class StaffService {
             }
 
             public void start(I iface, addStaff_args args, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException {
-                iface.addStaff(args.companyInfo, args.staff, resultHandler);
+                iface.addStaff(args.companyInfo, args.staffInfo, resultHandler);
             }
         }
 
-        public static class getStaffById<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getStaffById_args, com.aries.department.athena.contract.thrift.dto.Staff> {
+        public static class getStaffById<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getStaffById_args, com.aries.department.athena.contract.thrift.dto.StaffInfo> {
             public getStaffById() {
                 super("getStaffById");
             }
@@ -836,10 +836,10 @@ public class StaffService {
                 return new getStaffById_args();
             }
 
-            public org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
+            public org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
                 final org.apache.thrift.AsyncProcessFunction fcall = this;
-                return new org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff>() {
-                    public void onComplete(com.aries.department.athena.contract.thrift.dto.Staff o) {
+                return new org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo>() {
+                    public void onComplete(com.aries.department.athena.contract.thrift.dto.StaffInfo o) {
                         getStaffById_result result = new getStaffById_result();
                         result.success = o;
                         try {
@@ -884,12 +884,12 @@ public class StaffService {
                 return false;
             }
 
-            public void start(I iface, getStaffById_args args, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler) throws org.apache.thrift.TException {
+            public void start(I iface, getStaffById_args args, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler) throws org.apache.thrift.TException {
                 iface.getStaffById(args.companyInfo, args.id, resultHandler);
             }
         }
 
-        public static class getStaffByName<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getStaffByName_args, java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> {
+        public static class getStaffByName<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getStaffByName_args, java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> {
             public getStaffByName() {
                 super("getStaffByName");
             }
@@ -898,10 +898,10 @@ public class StaffService {
                 return new getStaffByName_args();
             }
 
-            public org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
+            public org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
                 final org.apache.thrift.AsyncProcessFunction fcall = this;
-                return new org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>>() {
-                    public void onComplete(java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> o) {
+                return new org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>>() {
+                    public void onComplete(java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> o) {
                         getStaffByName_result result = new getStaffByName_result();
                         result.success = o;
                         try {
@@ -946,12 +946,12 @@ public class StaffService {
                 return false;
             }
 
-            public void start(I iface, getStaffByName_args args, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler) throws org.apache.thrift.TException {
+            public void start(I iface, getStaffByName_args args, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler) throws org.apache.thrift.TException {
                 iface.getStaffByName(args.companyInfo, args.name, resultHandler);
             }
         }
 
-        public static class getStaffByPinyin<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getStaffByPinyin_args, java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> {
+        public static class getStaffByPinyin<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getStaffByPinyin_args, java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> {
             public getStaffByPinyin() {
                 super("getStaffByPinyin");
             }
@@ -960,10 +960,10 @@ public class StaffService {
                 return new getStaffByPinyin_args();
             }
 
-            public org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
+            public org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
                 final org.apache.thrift.AsyncProcessFunction fcall = this;
-                return new org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>>() {
-                    public void onComplete(java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> o) {
+                return new org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>>() {
+                    public void onComplete(java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> o) {
                         getStaffByPinyin_result result = new getStaffByPinyin_result();
                         result.success = o;
                         try {
@@ -1008,12 +1008,12 @@ public class StaffService {
                 return false;
             }
 
-            public void start(I iface, getStaffByPinyin_args args, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>> resultHandler) throws org.apache.thrift.TException {
+            public void start(I iface, getStaffByPinyin_args args, org.apache.thrift.async.AsyncMethodCallback<java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>> resultHandler) throws org.apache.thrift.TException {
                 iface.getStaffByPinyin(args.companyInfo, args.pinyin, resultHandler);
             }
         }
 
-        public static class getLastStaffBypinyin<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getLastStaffBypinyin_args, com.aries.department.athena.contract.thrift.dto.Staff> {
+        public static class getLastStaffBypinyin<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, getLastStaffBypinyin_args, com.aries.department.athena.contract.thrift.dto.StaffInfo> {
             public getLastStaffBypinyin() {
                 super("getLastStaffBypinyin");
             }
@@ -1022,10 +1022,10 @@ public class StaffService {
                 return new getLastStaffBypinyin_args();
             }
 
-            public org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
+            public org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> getResultHandler(final org.apache.thrift.server.AbstractNonblockingServer.AsyncFrameBuffer fb, final int seqid) {
                 final org.apache.thrift.AsyncProcessFunction fcall = this;
-                return new org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff>() {
-                    public void onComplete(com.aries.department.athena.contract.thrift.dto.Staff o) {
+                return new org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo>() {
+                    public void onComplete(com.aries.department.athena.contract.thrift.dto.StaffInfo o) {
                         getLastStaffBypinyin_result result = new getLastStaffBypinyin_result();
                         result.success = o;
                         try {
@@ -1070,7 +1070,7 @@ public class StaffService {
                 return false;
             }
 
-            public void start(I iface, getLastStaffBypinyin_args args, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.Staff> resultHandler) throws org.apache.thrift.TException {
+            public void start(I iface, getLastStaffBypinyin_args args, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.StaffInfo> resultHandler) throws org.apache.thrift.TException {
                 iface.getLastStaffBypinyin(args.companyInfo, args.pinyin, resultHandler);
             }
         }
@@ -1133,7 +1133,7 @@ public class StaffService {
             }
 
             public void start(I iface, updateStaffById_args args, org.apache.thrift.async.AsyncMethodCallback<com.aries.department.athena.contract.thrift.dto.AthenaResponse> resultHandler) throws org.apache.thrift.TException {
-                iface.updateStaffById(args.companyInfo, args.staff, resultHandler);
+                iface.updateStaffById(args.companyInfo, args.staffInfo, resultHandler);
             }
         }
 
@@ -1767,7 +1767,7 @@ public class StaffService {
         private static final org.apache.thrift.protocol.TStruct STRUCT_DESC = new org.apache.thrift.protocol.TStruct("addStaff_args");
 
         private static final org.apache.thrift.protocol.TField COMPANY_INFO_FIELD_DESC = new org.apache.thrift.protocol.TField("companyInfo", org.apache.thrift.protocol.TType.STRUCT, (short) 1);
-        private static final org.apache.thrift.protocol.TField STAFF_FIELD_DESC = new org.apache.thrift.protocol.TField("staff", org.apache.thrift.protocol.TType.STRUCT, (short) 2);
+        private static final org.apache.thrift.protocol.TField STAFF_INFO_FIELD_DESC = new org.apache.thrift.protocol.TField("staffInfo", org.apache.thrift.protocol.TType.STRUCT, (short) 2);
 
         private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new addStaff_argsStandardSchemeFactory();
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new addStaff_argsTupleSchemeFactory();
@@ -1775,12 +1775,12 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo; // required
         public @org.apache.thrift.annotation.Nullable
-        com.aries.department.athena.contract.thrift.dto.Staff staff; // required
+        com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo; // required
 
         /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
-            STAFF((short) 2, "staff");
+            STAFF_INFO((short) 2, "staffInfo");
 
             private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -1798,8 +1798,8 @@ public class StaffService {
                 switch (fieldId) {
                     case 1: // COMPANY_INFO
                         return COMPANY_INFO;
-                    case 2: // STAFF
-                        return STAFF;
+                    case 2: // STAFF_INFO
+                        return STAFF_INFO;
                     default:
                         return null;
                 }
@@ -1848,8 +1848,8 @@ public class StaffService {
             java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
             tmpMap.put(_Fields.COMPANY_INFO, new org.apache.thrift.meta_data.FieldMetaData("companyInfo", org.apache.thrift.TFieldRequirementType.DEFAULT,
                     new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.CompanyInfo.class)));
-            tmpMap.put(_Fields.STAFF, new org.apache.thrift.meta_data.FieldMetaData("staff", org.apache.thrift.TFieldRequirementType.DEFAULT,
-                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.Staff.class)));
+            tmpMap.put(_Fields.STAFF_INFO, new org.apache.thrift.meta_data.FieldMetaData("staffInfo", org.apache.thrift.TFieldRequirementType.DEFAULT,
+                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.StaffInfo.class)));
             metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
             org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(addStaff_args.class, metaDataMap);
         }
@@ -1859,10 +1859,10 @@ public class StaffService {
 
         public addStaff_args(
                 com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo,
-                com.aries.department.athena.contract.thrift.dto.Staff staff) {
+                com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) {
             this();
             this.companyInfo = companyInfo;
-            this.staff = staff;
+            this.staffInfo = staffInfo;
         }
 
         /**
@@ -1872,8 +1872,8 @@ public class StaffService {
             if (other.isSetCompanyInfo()) {
                 this.companyInfo = new com.aries.department.athena.contract.thrift.dto.CompanyInfo(other.companyInfo);
             }
-            if (other.isSetStaff()) {
-                this.staff = new com.aries.department.athena.contract.thrift.dto.Staff(other.staff);
+            if (other.isSetStaffInfo()) {
+                this.staffInfo = new com.aries.department.athena.contract.thrift.dto.StaffInfo(other.staffInfo);
             }
         }
 
@@ -1884,7 +1884,7 @@ public class StaffService {
         @Override
         public void clear() {
             this.companyInfo = null;
-            this.staff = null;
+            this.staffInfo = null;
         }
 
         @org.apache.thrift.annotation.Nullable
@@ -1913,27 +1913,27 @@ public class StaffService {
         }
 
         @org.apache.thrift.annotation.Nullable
-        public com.aries.department.athena.contract.thrift.dto.Staff getStaff() {
-            return this.staff;
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getStaffInfo() {
+            return this.staffInfo;
         }
 
-        public addStaff_args setStaff(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff staff) {
-            this.staff = staff;
+        public addStaff_args setStaffInfo(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) {
+            this.staffInfo = staffInfo;
             return this;
         }
 
-        public void unsetStaff() {
-            this.staff = null;
+        public void unsetStaffInfo() {
+            this.staffInfo = null;
         }
 
-        /** Returns true if field staff is set (has been assigned a value) and false otherwise */
-        public boolean isSetStaff() {
-            return this.staff != null;
+        /** Returns true if field staffInfo is set (has been assigned a value) and false otherwise */
+        public boolean isSetStaffInfo() {
+            return this.staffInfo != null;
         }
 
-        public void setStaffIsSet(boolean value) {
+        public void setStaffInfoIsSet(boolean value) {
             if (!value) {
-                this.staff = null;
+                this.staffInfo = null;
             }
         }
 
@@ -1947,11 +1947,11 @@ public class StaffService {
                     }
                     break;
 
-                case STAFF:
+                case STAFF_INFO:
                     if (value == null) {
-                        unsetStaff();
+                        unsetStaffInfo();
                     } else {
-                        setStaff((com.aries.department.athena.contract.thrift.dto.Staff) value);
+                        setStaffInfo((com.aries.department.athena.contract.thrift.dto.StaffInfo) value);
                     }
                     break;
 
@@ -1964,8 +1964,8 @@ public class StaffService {
                 case COMPANY_INFO:
                     return getCompanyInfo();
 
-                case STAFF:
-                    return getStaff();
+                case STAFF_INFO:
+                    return getStaffInfo();
 
             }
             throw new java.lang.IllegalStateException();
@@ -1980,8 +1980,8 @@ public class StaffService {
             switch (field) {
                 case COMPANY_INFO:
                     return isSetCompanyInfo();
-                case STAFF:
-                    return isSetStaff();
+                case STAFF_INFO:
+                    return isSetStaffInfo();
             }
             throw new java.lang.IllegalStateException();
         }
@@ -2010,12 +2010,12 @@ public class StaffService {
                     return false;
             }
 
-            boolean this_present_staff = true && this.isSetStaff();
-            boolean that_present_staff = true && that.isSetStaff();
-            if (this_present_staff || that_present_staff) {
-                if (!(this_present_staff && that_present_staff))
+            boolean this_present_staffInfo = true && this.isSetStaffInfo();
+            boolean that_present_staffInfo = true && that.isSetStaffInfo();
+            if (this_present_staffInfo || that_present_staffInfo) {
+                if (!(this_present_staffInfo && that_present_staffInfo))
                     return false;
-                if (!this.staff.equals(that.staff))
+                if (!this.staffInfo.equals(that.staffInfo))
                     return false;
             }
 
@@ -2030,9 +2030,9 @@ public class StaffService {
             if (isSetCompanyInfo())
                 hashCode = hashCode * 8191 + companyInfo.hashCode();
 
-            hashCode = hashCode * 8191 + ((isSetStaff()) ? 131071 : 524287);
-            if (isSetStaff())
-                hashCode = hashCode * 8191 + staff.hashCode();
+            hashCode = hashCode * 8191 + ((isSetStaffInfo()) ? 131071 : 524287);
+            if (isSetStaffInfo())
+                hashCode = hashCode * 8191 + staffInfo.hashCode();
 
             return hashCode;
         }
@@ -2055,12 +2055,12 @@ public class StaffService {
                     return lastComparison;
                 }
             }
-            lastComparison = java.lang.Boolean.valueOf(isSetStaff()).compareTo(other.isSetStaff());
+            lastComparison = java.lang.Boolean.valueOf(isSetStaffInfo()).compareTo(other.isSetStaffInfo());
             if (lastComparison != 0) {
                 return lastComparison;
             }
-            if (isSetStaff()) {
-                lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.staff, other.staff);
+            if (isSetStaffInfo()) {
+                lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.staffInfo, other.staffInfo);
                 if (lastComparison != 0) {
                     return lastComparison;
                 }
@@ -2094,11 +2094,11 @@ public class StaffService {
             }
             first = false;
             if (!first) sb.append(", ");
-            sb.append("staff:");
-            if (this.staff == null) {
+            sb.append("staffInfo:");
+            if (this.staffInfo == null) {
                 sb.append("null");
             } else {
-                sb.append(this.staff);
+                sb.append(this.staffInfo);
             }
             first = false;
             sb.append(")");
@@ -2111,8 +2111,8 @@ public class StaffService {
             if (companyInfo != null) {
                 companyInfo.validate();
             }
-            if (staff != null) {
-                staff.validate();
+            if (staffInfo != null) {
+                staffInfo.validate();
             }
         }
 
@@ -2158,11 +2158,11 @@ public class StaffService {
                                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
                             }
                             break;
-                        case 2: // STAFF
+                        case 2: // STAFF_INFO
                             if (schemeField.type == org.apache.thrift.protocol.TType.STRUCT) {
-                                struct.staff = new com.aries.department.athena.contract.thrift.dto.Staff();
-                                struct.staff.read(iprot);
-                                struct.setStaffIsSet(true);
+                                struct.staffInfo = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
+                                struct.staffInfo.read(iprot);
+                                struct.setStaffInfoIsSet(true);
                             } else {
                                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
                             }
@@ -2187,9 +2187,9 @@ public class StaffService {
                     struct.companyInfo.write(oprot);
                     oprot.writeFieldEnd();
                 }
-                if (struct.staff != null) {
-                    oprot.writeFieldBegin(STAFF_FIELD_DESC);
-                    struct.staff.write(oprot);
+                if (struct.staffInfo != null) {
+                    oprot.writeFieldBegin(STAFF_INFO_FIELD_DESC);
+                    struct.staffInfo.write(oprot);
                     oprot.writeFieldEnd();
                 }
                 oprot.writeFieldStop();
@@ -2213,15 +2213,15 @@ public class StaffService {
                 if (struct.isSetCompanyInfo()) {
                     optionals.set(0);
                 }
-                if (struct.isSetStaff()) {
+                if (struct.isSetStaffInfo()) {
                     optionals.set(1);
                 }
                 oprot.writeBitSet(optionals, 2);
                 if (struct.isSetCompanyInfo()) {
                     struct.companyInfo.write(oprot);
                 }
-                if (struct.isSetStaff()) {
-                    struct.staff.write(oprot);
+                if (struct.isSetStaffInfo()) {
+                    struct.staffInfo.write(oprot);
                 }
             }
 
@@ -2235,9 +2235,9 @@ public class StaffService {
                     struct.setCompanyInfoIsSet(true);
                 }
                 if (incoming.get(1)) {
-                    struct.staff = new com.aries.department.athena.contract.thrift.dto.Staff();
-                    struct.staff.read(iprot);
-                    struct.setStaffIsSet(true);
+                    struct.staffInfo = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
+                    struct.staffInfo.read(iprot);
+                    struct.setStaffInfoIsSet(true);
                 }
             }
         }
@@ -3102,7 +3102,7 @@ public class StaffService {
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getStaffById_resultTupleSchemeFactory();
 
         public @org.apache.thrift.annotation.Nullable
-        com.aries.department.athena.contract.thrift.dto.Staff success; // required
+        com.aries.department.athena.contract.thrift.dto.StaffInfo success; // required
 
         /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -3171,7 +3171,7 @@ public class StaffService {
         static {
             java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
             tmpMap.put(_Fields.SUCCESS, new org.apache.thrift.meta_data.FieldMetaData("success", org.apache.thrift.TFieldRequirementType.DEFAULT,
-                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.Staff.class)));
+                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.StaffInfo.class)));
             metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
             org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getStaffById_result.class, metaDataMap);
         }
@@ -3180,7 +3180,7 @@ public class StaffService {
         }
 
         public getStaffById_result(
-                com.aries.department.athena.contract.thrift.dto.Staff success) {
+                com.aries.department.athena.contract.thrift.dto.StaffInfo success) {
             this();
             this.success = success;
         }
@@ -3190,7 +3190,7 @@ public class StaffService {
          */
         public getStaffById_result(getStaffById_result other) {
             if (other.isSetSuccess()) {
-                this.success = new com.aries.department.athena.contract.thrift.dto.Staff(other.success);
+                this.success = new com.aries.department.athena.contract.thrift.dto.StaffInfo(other.success);
             }
         }
 
@@ -3204,11 +3204,11 @@ public class StaffService {
         }
 
         @org.apache.thrift.annotation.Nullable
-        public com.aries.department.athena.contract.thrift.dto.Staff getSuccess() {
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getSuccess() {
             return this.success;
         }
 
-        public getStaffById_result setSuccess(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff success) {
+        public getStaffById_result setSuccess(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo success) {
             this.success = success;
             return this;
         }
@@ -3234,7 +3234,7 @@ public class StaffService {
                     if (value == null) {
                         unsetSuccess();
                     } else {
-                        setSuccess((com.aries.department.athena.contract.thrift.dto.Staff) value);
+                        setSuccess((com.aries.department.athena.contract.thrift.dto.StaffInfo) value);
                     }
                     break;
 
@@ -3395,7 +3395,7 @@ public class StaffService {
                     switch (schemeField.id) {
                         case 0: // SUCCESS
                             if (schemeField.type == org.apache.thrift.protocol.TType.STRUCT) {
-                                struct.success = new com.aries.department.athena.contract.thrift.dto.Staff();
+                                struct.success = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                                 struct.success.read(iprot);
                                 struct.setSuccessIsSet(true);
                             } else {
@@ -3454,7 +3454,7 @@ public class StaffService {
                 org.apache.thrift.protocol.TTupleProtocol iprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
                 java.util.BitSet incoming = iprot.readBitSet(1);
                 if (incoming.get(0)) {
-                    struct.success = new com.aries.department.athena.contract.thrift.dto.Staff();
+                    struct.success = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                     struct.success.read(iprot);
                     struct.setSuccessIsSet(true);
                 }
@@ -3954,7 +3954,7 @@ public class StaffService {
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getStaffByName_resultTupleSchemeFactory();
 
         public @org.apache.thrift.annotation.Nullable
-        java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> success; // required
+        java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success; // required
 
         /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -4024,7 +4024,7 @@ public class StaffService {
             java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
             tmpMap.put(_Fields.SUCCESS, new org.apache.thrift.meta_data.FieldMetaData("success", org.apache.thrift.TFieldRequirementType.DEFAULT,
                     new org.apache.thrift.meta_data.ListMetaData(org.apache.thrift.protocol.TType.LIST,
-                            new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.Staff.class))));
+                            new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.StaffInfo.class))));
             metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
             org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getStaffByName_result.class, metaDataMap);
         }
@@ -4033,7 +4033,7 @@ public class StaffService {
         }
 
         public getStaffByName_result(
-                java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> success) {
+                java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success) {
             this();
             this.success = success;
         }
@@ -4043,9 +4043,9 @@ public class StaffService {
          */
         public getStaffByName_result(getStaffByName_result other) {
             if (other.isSetSuccess()) {
-                java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> __this__success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>(other.success.size());
-                for (com.aries.department.athena.contract.thrift.dto.Staff other_element : other.success) {
-                    __this__success.add(new com.aries.department.athena.contract.thrift.dto.Staff(other_element));
+                java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> __this__success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>(other.success.size());
+                for (com.aries.department.athena.contract.thrift.dto.StaffInfo other_element : other.success) {
+                    __this__success.add(new com.aries.department.athena.contract.thrift.dto.StaffInfo(other_element));
                 }
                 this.success = __this__success;
             }
@@ -4065,23 +4065,23 @@ public class StaffService {
         }
 
         @org.apache.thrift.annotation.Nullable
-        public java.util.Iterator<com.aries.department.athena.contract.thrift.dto.Staff> getSuccessIterator() {
+        public java.util.Iterator<com.aries.department.athena.contract.thrift.dto.StaffInfo> getSuccessIterator() {
             return (this.success == null) ? null : this.success.iterator();
         }
 
-        public void addToSuccess(com.aries.department.athena.contract.thrift.dto.Staff elem) {
+        public void addToSuccess(com.aries.department.athena.contract.thrift.dto.StaffInfo elem) {
             if (this.success == null) {
-                this.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>();
+                this.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>();
             }
             this.success.add(elem);
         }
 
         @org.apache.thrift.annotation.Nullable
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getSuccess() {
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getSuccess() {
             return this.success;
         }
 
-        public getStaffByName_result setSuccess(@org.apache.thrift.annotation.Nullable java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> success) {
+        public getStaffByName_result setSuccess(@org.apache.thrift.annotation.Nullable java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success) {
             this.success = success;
             return this;
         }
@@ -4107,7 +4107,7 @@ public class StaffService {
                     if (value == null) {
                         unsetSuccess();
                     } else {
-                        setSuccess((java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>) value);
+                        setSuccess((java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>) value);
                     }
                     break;
 
@@ -4267,10 +4267,10 @@ public class StaffService {
                             if (schemeField.type == org.apache.thrift.protocol.TType.LIST) {
                                 {
                                     org.apache.thrift.protocol.TList _list16 = iprot.readListBegin();
-                                    struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>(_list16.size);
-                                    @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff _elem17;
+                                    struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>(_list16.size);
+                                    @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo _elem17;
                                     for (int _i18 = 0; _i18 < _list16.size; ++_i18) {
-                                        _elem17 = new com.aries.department.athena.contract.thrift.dto.Staff();
+                                        _elem17 = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                                         _elem17.read(iprot);
                                         struct.success.add(_elem17);
                                     }
@@ -4300,7 +4300,7 @@ public class StaffService {
                     oprot.writeFieldBegin(SUCCESS_FIELD_DESC);
                     {
                         oprot.writeListBegin(new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.STRUCT, struct.success.size()));
-                        for (com.aries.department.athena.contract.thrift.dto.Staff _iter19 : struct.success) {
+                        for (com.aries.department.athena.contract.thrift.dto.StaffInfo _iter19 : struct.success) {
                             _iter19.write(oprot);
                         }
                         oprot.writeListEnd();
@@ -4332,7 +4332,7 @@ public class StaffService {
                 if (struct.isSetSuccess()) {
                     {
                         oprot.writeI32(struct.success.size());
-                        for (com.aries.department.athena.contract.thrift.dto.Staff _iter20 : struct.success) {
+                        for (com.aries.department.athena.contract.thrift.dto.StaffInfo _iter20 : struct.success) {
                             _iter20.write(oprot);
                         }
                     }
@@ -4346,10 +4346,10 @@ public class StaffService {
                 if (incoming.get(0)) {
                     {
                         org.apache.thrift.protocol.TList _list21 = new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.STRUCT, iprot.readI32());
-                        struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>(_list21.size);
-                        @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff _elem22;
+                        struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>(_list21.size);
+                        @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo _elem22;
                         for (int _i23 = 0; _i23 < _list21.size; ++_i23) {
-                            _elem22 = new com.aries.department.athena.contract.thrift.dto.Staff();
+                            _elem22 = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                             _elem22.read(iprot);
                             struct.success.add(_elem22);
                         }
@@ -4852,7 +4852,7 @@ public class StaffService {
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getStaffByPinyin_resultTupleSchemeFactory();
 
         public @org.apache.thrift.annotation.Nullable
-        java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> success; // required
+        java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success; // required
 
         /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -4922,7 +4922,7 @@ public class StaffService {
             java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
             tmpMap.put(_Fields.SUCCESS, new org.apache.thrift.meta_data.FieldMetaData("success", org.apache.thrift.TFieldRequirementType.DEFAULT,
                     new org.apache.thrift.meta_data.ListMetaData(org.apache.thrift.protocol.TType.LIST,
-                            new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.Staff.class))));
+                            new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.StaffInfo.class))));
             metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
             org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getStaffByPinyin_result.class, metaDataMap);
         }
@@ -4931,7 +4931,7 @@ public class StaffService {
         }
 
         public getStaffByPinyin_result(
-                java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> success) {
+                java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success) {
             this();
             this.success = success;
         }
@@ -4941,9 +4941,9 @@ public class StaffService {
          */
         public getStaffByPinyin_result(getStaffByPinyin_result other) {
             if (other.isSetSuccess()) {
-                java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> __this__success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>(other.success.size());
-                for (com.aries.department.athena.contract.thrift.dto.Staff other_element : other.success) {
-                    __this__success.add(new com.aries.department.athena.contract.thrift.dto.Staff(other_element));
+                java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> __this__success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>(other.success.size());
+                for (com.aries.department.athena.contract.thrift.dto.StaffInfo other_element : other.success) {
+                    __this__success.add(new com.aries.department.athena.contract.thrift.dto.StaffInfo(other_element));
                 }
                 this.success = __this__success;
             }
@@ -4963,23 +4963,23 @@ public class StaffService {
         }
 
         @org.apache.thrift.annotation.Nullable
-        public java.util.Iterator<com.aries.department.athena.contract.thrift.dto.Staff> getSuccessIterator() {
+        public java.util.Iterator<com.aries.department.athena.contract.thrift.dto.StaffInfo> getSuccessIterator() {
             return (this.success == null) ? null : this.success.iterator();
         }
 
-        public void addToSuccess(com.aries.department.athena.contract.thrift.dto.Staff elem) {
+        public void addToSuccess(com.aries.department.athena.contract.thrift.dto.StaffInfo elem) {
             if (this.success == null) {
-                this.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>();
+                this.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>();
             }
             this.success.add(elem);
         }
 
         @org.apache.thrift.annotation.Nullable
-        public java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> getSuccess() {
+        public java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> getSuccess() {
             return this.success;
         }
 
-        public getStaffByPinyin_result setSuccess(@org.apache.thrift.annotation.Nullable java.util.List<com.aries.department.athena.contract.thrift.dto.Staff> success) {
+        public getStaffByPinyin_result setSuccess(@org.apache.thrift.annotation.Nullable java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success) {
             this.success = success;
             return this;
         }
@@ -5005,7 +5005,7 @@ public class StaffService {
                     if (value == null) {
                         unsetSuccess();
                     } else {
-                        setSuccess((java.util.List<com.aries.department.athena.contract.thrift.dto.Staff>) value);
+                        setSuccess((java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo>) value);
                     }
                     break;
 
@@ -5165,10 +5165,10 @@ public class StaffService {
                             if (schemeField.type == org.apache.thrift.protocol.TType.LIST) {
                                 {
                                     org.apache.thrift.protocol.TList _list24 = iprot.readListBegin();
-                                    struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>(_list24.size);
-                                    @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff _elem25;
+                                    struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>(_list24.size);
+                                    @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo _elem25;
                                     for (int _i26 = 0; _i26 < _list24.size; ++_i26) {
-                                        _elem25 = new com.aries.department.athena.contract.thrift.dto.Staff();
+                                        _elem25 = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                                         _elem25.read(iprot);
                                         struct.success.add(_elem25);
                                     }
@@ -5198,7 +5198,7 @@ public class StaffService {
                     oprot.writeFieldBegin(SUCCESS_FIELD_DESC);
                     {
                         oprot.writeListBegin(new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.STRUCT, struct.success.size()));
-                        for (com.aries.department.athena.contract.thrift.dto.Staff _iter27 : struct.success) {
+                        for (com.aries.department.athena.contract.thrift.dto.StaffInfo _iter27 : struct.success) {
                             _iter27.write(oprot);
                         }
                         oprot.writeListEnd();
@@ -5230,7 +5230,7 @@ public class StaffService {
                 if (struct.isSetSuccess()) {
                     {
                         oprot.writeI32(struct.success.size());
-                        for (com.aries.department.athena.contract.thrift.dto.Staff _iter28 : struct.success) {
+                        for (com.aries.department.athena.contract.thrift.dto.StaffInfo _iter28 : struct.success) {
                             _iter28.write(oprot);
                         }
                     }
@@ -5244,10 +5244,10 @@ public class StaffService {
                 if (incoming.get(0)) {
                     {
                         org.apache.thrift.protocol.TList _list29 = new org.apache.thrift.protocol.TList(org.apache.thrift.protocol.TType.STRUCT, iprot.readI32());
-                        struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.Staff>(_list29.size);
-                        @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff _elem30;
+                        struct.success = new java.util.ArrayList<com.aries.department.athena.contract.thrift.dto.StaffInfo>(_list29.size);
+                        @org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo _elem30;
                         for (int _i31 = 0; _i31 < _list29.size; ++_i31) {
-                            _elem30 = new com.aries.department.athena.contract.thrift.dto.Staff();
+                            _elem30 = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                             _elem30.read(iprot);
                             struct.success.add(_elem30);
                         }
@@ -5750,7 +5750,7 @@ public class StaffService {
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new getLastStaffBypinyin_resultTupleSchemeFactory();
 
         public @org.apache.thrift.annotation.Nullable
-        com.aries.department.athena.contract.thrift.dto.Staff success; // required
+        com.aries.department.athena.contract.thrift.dto.StaffInfo success; // required
 
         /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -5819,7 +5819,7 @@ public class StaffService {
         static {
             java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
             tmpMap.put(_Fields.SUCCESS, new org.apache.thrift.meta_data.FieldMetaData("success", org.apache.thrift.TFieldRequirementType.DEFAULT,
-                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.Staff.class)));
+                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.StaffInfo.class)));
             metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
             org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(getLastStaffBypinyin_result.class, metaDataMap);
         }
@@ -5828,7 +5828,7 @@ public class StaffService {
         }
 
         public getLastStaffBypinyin_result(
-                com.aries.department.athena.contract.thrift.dto.Staff success) {
+                com.aries.department.athena.contract.thrift.dto.StaffInfo success) {
             this();
             this.success = success;
         }
@@ -5838,7 +5838,7 @@ public class StaffService {
          */
         public getLastStaffBypinyin_result(getLastStaffBypinyin_result other) {
             if (other.isSetSuccess()) {
-                this.success = new com.aries.department.athena.contract.thrift.dto.Staff(other.success);
+                this.success = new com.aries.department.athena.contract.thrift.dto.StaffInfo(other.success);
             }
         }
 
@@ -5852,11 +5852,11 @@ public class StaffService {
         }
 
         @org.apache.thrift.annotation.Nullable
-        public com.aries.department.athena.contract.thrift.dto.Staff getSuccess() {
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getSuccess() {
             return this.success;
         }
 
-        public getLastStaffBypinyin_result setSuccess(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff success) {
+        public getLastStaffBypinyin_result setSuccess(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo success) {
             this.success = success;
             return this;
         }
@@ -5882,7 +5882,7 @@ public class StaffService {
                     if (value == null) {
                         unsetSuccess();
                     } else {
-                        setSuccess((com.aries.department.athena.contract.thrift.dto.Staff) value);
+                        setSuccess((com.aries.department.athena.contract.thrift.dto.StaffInfo) value);
                     }
                     break;
 
@@ -6043,7 +6043,7 @@ public class StaffService {
                     switch (schemeField.id) {
                         case 0: // SUCCESS
                             if (schemeField.type == org.apache.thrift.protocol.TType.STRUCT) {
-                                struct.success = new com.aries.department.athena.contract.thrift.dto.Staff();
+                                struct.success = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                                 struct.success.read(iprot);
                                 struct.setSuccessIsSet(true);
                             } else {
@@ -6102,7 +6102,7 @@ public class StaffService {
                 org.apache.thrift.protocol.TTupleProtocol iprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
                 java.util.BitSet incoming = iprot.readBitSet(1);
                 if (incoming.get(0)) {
-                    struct.success = new com.aries.department.athena.contract.thrift.dto.Staff();
+                    struct.success = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
                     struct.success.read(iprot);
                     struct.setSuccessIsSet(true);
                 }
@@ -6118,7 +6118,7 @@ public class StaffService {
         private static final org.apache.thrift.protocol.TStruct STRUCT_DESC = new org.apache.thrift.protocol.TStruct("updateStaffById_args");
 
         private static final org.apache.thrift.protocol.TField COMPANY_INFO_FIELD_DESC = new org.apache.thrift.protocol.TField("companyInfo", org.apache.thrift.protocol.TType.STRUCT, (short) 1);
-        private static final org.apache.thrift.protocol.TField STAFF_FIELD_DESC = new org.apache.thrift.protocol.TField("staff", org.apache.thrift.protocol.TType.STRUCT, (short) 2);
+        private static final org.apache.thrift.protocol.TField STAFF_INFO_FIELD_DESC = new org.apache.thrift.protocol.TField("staffInfo", org.apache.thrift.protocol.TType.STRUCT, (short) 2);
 
         private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new updateStaffById_argsStandardSchemeFactory();
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new updateStaffById_argsTupleSchemeFactory();
@@ -6126,12 +6126,12 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo; // required
         public @org.apache.thrift.annotation.Nullable
-        com.aries.department.athena.contract.thrift.dto.Staff staff; // required
+        com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo; // required
 
         /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
-            STAFF((short) 2, "staff");
+            STAFF_INFO((short) 2, "staffInfo");
 
             private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -6149,8 +6149,8 @@ public class StaffService {
                 switch (fieldId) {
                     case 1: // COMPANY_INFO
                         return COMPANY_INFO;
-                    case 2: // STAFF
-                        return STAFF;
+                    case 2: // STAFF_INFO
+                        return STAFF_INFO;
                     default:
                         return null;
                 }
@@ -6199,8 +6199,8 @@ public class StaffService {
             java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
             tmpMap.put(_Fields.COMPANY_INFO, new org.apache.thrift.meta_data.FieldMetaData("companyInfo", org.apache.thrift.TFieldRequirementType.DEFAULT,
                     new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.CompanyInfo.class)));
-            tmpMap.put(_Fields.STAFF, new org.apache.thrift.meta_data.FieldMetaData("staff", org.apache.thrift.TFieldRequirementType.DEFAULT,
-                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.Staff.class)));
+            tmpMap.put(_Fields.STAFF_INFO, new org.apache.thrift.meta_data.FieldMetaData("staffInfo", org.apache.thrift.TFieldRequirementType.DEFAULT,
+                    new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, com.aries.department.athena.contract.thrift.dto.StaffInfo.class)));
             metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
             org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(updateStaffById_args.class, metaDataMap);
         }
@@ -6210,10 +6210,10 @@ public class StaffService {
 
         public updateStaffById_args(
                 com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo,
-                com.aries.department.athena.contract.thrift.dto.Staff staff) {
+                com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) {
             this();
             this.companyInfo = companyInfo;
-            this.staff = staff;
+            this.staffInfo = staffInfo;
         }
 
         /**
@@ -6223,8 +6223,8 @@ public class StaffService {
             if (other.isSetCompanyInfo()) {
                 this.companyInfo = new com.aries.department.athena.contract.thrift.dto.CompanyInfo(other.companyInfo);
             }
-            if (other.isSetStaff()) {
-                this.staff = new com.aries.department.athena.contract.thrift.dto.Staff(other.staff);
+            if (other.isSetStaffInfo()) {
+                this.staffInfo = new com.aries.department.athena.contract.thrift.dto.StaffInfo(other.staffInfo);
             }
         }
 
@@ -6235,7 +6235,7 @@ public class StaffService {
         @Override
         public void clear() {
             this.companyInfo = null;
-            this.staff = null;
+            this.staffInfo = null;
         }
 
         @org.apache.thrift.annotation.Nullable
@@ -6264,27 +6264,27 @@ public class StaffService {
         }
 
         @org.apache.thrift.annotation.Nullable
-        public com.aries.department.athena.contract.thrift.dto.Staff getStaff() {
-            return this.staff;
+        public com.aries.department.athena.contract.thrift.dto.StaffInfo getStaffInfo() {
+            return this.staffInfo;
         }
 
-        public updateStaffById_args setStaff(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.Staff staff) {
-            this.staff = staff;
+        public updateStaffById_args setStaffInfo(@org.apache.thrift.annotation.Nullable com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo) {
+            this.staffInfo = staffInfo;
             return this;
         }
 
-        public void unsetStaff() {
-            this.staff = null;
+        public void unsetStaffInfo() {
+            this.staffInfo = null;
         }
 
-        /** Returns true if field staff is set (has been assigned a value) and false otherwise */
-        public boolean isSetStaff() {
-            return this.staff != null;
+        /** Returns true if field staffInfo is set (has been assigned a value) and false otherwise */
+        public boolean isSetStaffInfo() {
+            return this.staffInfo != null;
         }
 
-        public void setStaffIsSet(boolean value) {
+        public void setStaffInfoIsSet(boolean value) {
             if (!value) {
-                this.staff = null;
+                this.staffInfo = null;
             }
         }
 
@@ -6298,11 +6298,11 @@ public class StaffService {
                     }
                     break;
 
-                case STAFF:
+                case STAFF_INFO:
                     if (value == null) {
-                        unsetStaff();
+                        unsetStaffInfo();
                     } else {
-                        setStaff((com.aries.department.athena.contract.thrift.dto.Staff) value);
+                        setStaffInfo((com.aries.department.athena.contract.thrift.dto.StaffInfo) value);
                     }
                     break;
 
@@ -6315,8 +6315,8 @@ public class StaffService {
                 case COMPANY_INFO:
                     return getCompanyInfo();
 
-                case STAFF:
-                    return getStaff();
+                case STAFF_INFO:
+                    return getStaffInfo();
 
             }
             throw new java.lang.IllegalStateException();
@@ -6331,8 +6331,8 @@ public class StaffService {
             switch (field) {
                 case COMPANY_INFO:
                     return isSetCompanyInfo();
-                case STAFF:
-                    return isSetStaff();
+                case STAFF_INFO:
+                    return isSetStaffInfo();
             }
             throw new java.lang.IllegalStateException();
         }
@@ -6361,12 +6361,12 @@ public class StaffService {
                     return false;
             }
 
-            boolean this_present_staff = true && this.isSetStaff();
-            boolean that_present_staff = true && that.isSetStaff();
-            if (this_present_staff || that_present_staff) {
-                if (!(this_present_staff && that_present_staff))
+            boolean this_present_staffInfo = true && this.isSetStaffInfo();
+            boolean that_present_staffInfo = true && that.isSetStaffInfo();
+            if (this_present_staffInfo || that_present_staffInfo) {
+                if (!(this_present_staffInfo && that_present_staffInfo))
                     return false;
-                if (!this.staff.equals(that.staff))
+                if (!this.staffInfo.equals(that.staffInfo))
                     return false;
             }
 
@@ -6381,9 +6381,9 @@ public class StaffService {
             if (isSetCompanyInfo())
                 hashCode = hashCode * 8191 + companyInfo.hashCode();
 
-            hashCode = hashCode * 8191 + ((isSetStaff()) ? 131071 : 524287);
-            if (isSetStaff())
-                hashCode = hashCode * 8191 + staff.hashCode();
+            hashCode = hashCode * 8191 + ((isSetStaffInfo()) ? 131071 : 524287);
+            if (isSetStaffInfo())
+                hashCode = hashCode * 8191 + staffInfo.hashCode();
 
             return hashCode;
         }
@@ -6406,12 +6406,12 @@ public class StaffService {
                     return lastComparison;
                 }
             }
-            lastComparison = java.lang.Boolean.valueOf(isSetStaff()).compareTo(other.isSetStaff());
+            lastComparison = java.lang.Boolean.valueOf(isSetStaffInfo()).compareTo(other.isSetStaffInfo());
             if (lastComparison != 0) {
                 return lastComparison;
             }
-            if (isSetStaff()) {
-                lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.staff, other.staff);
+            if (isSetStaffInfo()) {
+                lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.staffInfo, other.staffInfo);
                 if (lastComparison != 0) {
                     return lastComparison;
                 }
@@ -6445,11 +6445,11 @@ public class StaffService {
             }
             first = false;
             if (!first) sb.append(", ");
-            sb.append("staff:");
-            if (this.staff == null) {
+            sb.append("staffInfo:");
+            if (this.staffInfo == null) {
                 sb.append("null");
             } else {
-                sb.append(this.staff);
+                sb.append(this.staffInfo);
             }
             first = false;
             sb.append(")");
@@ -6462,8 +6462,8 @@ public class StaffService {
             if (companyInfo != null) {
                 companyInfo.validate();
             }
-            if (staff != null) {
-                staff.validate();
+            if (staffInfo != null) {
+                staffInfo.validate();
             }
         }
 
@@ -6509,11 +6509,11 @@ public class StaffService {
                                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
                             }
                             break;
-                        case 2: // STAFF
+                        case 2: // STAFF_INFO
                             if (schemeField.type == org.apache.thrift.protocol.TType.STRUCT) {
-                                struct.staff = new com.aries.department.athena.contract.thrift.dto.Staff();
-                                struct.staff.read(iprot);
-                                struct.setStaffIsSet(true);
+                                struct.staffInfo = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
+                                struct.staffInfo.read(iprot);
+                                struct.setStaffInfoIsSet(true);
                             } else {
                                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
                             }
@@ -6538,9 +6538,9 @@ public class StaffService {
                     struct.companyInfo.write(oprot);
                     oprot.writeFieldEnd();
                 }
-                if (struct.staff != null) {
-                    oprot.writeFieldBegin(STAFF_FIELD_DESC);
-                    struct.staff.write(oprot);
+                if (struct.staffInfo != null) {
+                    oprot.writeFieldBegin(STAFF_INFO_FIELD_DESC);
+                    struct.staffInfo.write(oprot);
                     oprot.writeFieldEnd();
                 }
                 oprot.writeFieldStop();
@@ -6564,15 +6564,15 @@ public class StaffService {
                 if (struct.isSetCompanyInfo()) {
                     optionals.set(0);
                 }
-                if (struct.isSetStaff()) {
+                if (struct.isSetStaffInfo()) {
                     optionals.set(1);
                 }
                 oprot.writeBitSet(optionals, 2);
                 if (struct.isSetCompanyInfo()) {
                     struct.companyInfo.write(oprot);
                 }
-                if (struct.isSetStaff()) {
-                    struct.staff.write(oprot);
+                if (struct.isSetStaffInfo()) {
+                    struct.staffInfo.write(oprot);
                 }
             }
 
@@ -6586,9 +6586,9 @@ public class StaffService {
                     struct.setCompanyInfoIsSet(true);
                 }
                 if (incoming.get(1)) {
-                    struct.staff = new com.aries.department.athena.contract.thrift.dto.Staff();
-                    struct.staff.read(iprot);
-                    struct.setStaffIsSet(true);
+                    struct.staffInfo = new com.aries.department.athena.contract.thrift.dto.StaffInfo();
+                    struct.staffInfo.read(iprot);
+                    struct.setStaffInfoIsSet(true);
                 }
             }
         }

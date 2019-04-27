@@ -15,7 +15,27 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.Collections;
 import java.util.List;
 
+import static com.aries.department.athena.dal.repository.StaffRepository.State.*;
+
 public class StaffRepository {
+    public enum State {
+        error(0),
+        FAIL(1),
+        PARAM_ERROR(2),
+        SUCCESS(3),
+        NEED_RECALL(4);
+
+        private int code;
+
+        State(int code) {
+            this.code = code;
+        }
+
+        public int code() {
+            return this.code;
+        }
+    }
+
     /**
      * 添加员工
      *
@@ -25,13 +45,13 @@ public class StaffRepository {
      */
     public static int addStaff(String database, Staff staff) {
         if (staff == null) {
-            return 2;
+            return PARAM_ERROR.code();
         }
 
         try {
             staff.setGaeaId(getNextGaeaIdByName(database, staff.getFullname()));
         } catch (GenIdException e) {
-            return 1;
+            return FAIL.code();
         }
 
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
@@ -45,11 +65,11 @@ public class StaffRepository {
                 String template = "java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '%s' for key 'staff_gaea_id_uindex'";
                 String cause = String.format(template, staff.getGaeaId());
                 if (cause.equals(e.getCause().toString())) {
-                    return 4;
+                    return NEED_RECALL.code();
                 }
             }
 
-            return effective > 1 ? 3 : 0;
+            return effective > 1 ? SUCCESS.code() : error.code();
         }
     }
 

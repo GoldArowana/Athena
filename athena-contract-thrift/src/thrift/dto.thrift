@@ -28,7 +28,7 @@ struct DepartmentInfo {
     4: i32 upId
 }
 
-struct Staff {
+struct StaffInfo {
     1: i32 id,
     2: string fullname, //全名
     3: i32 aliasName,//别名

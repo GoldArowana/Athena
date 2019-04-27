@@ -28,15 +28,15 @@ service StaffService {
    //用于检测client-server之间通讯是否正常
    string ping(),
 
-   dto.AthenaResponse addStaff(1:dto.CompanyInfo companyInfo, 2:dto.Staff staff),
+   dto.AthenaResponse addStaff(1:dto.CompanyInfo companyInfo, 2:dto.StaffInfo staffInfo),
 
-   dto.Staff getStaffById(1:dto.CompanyInfo companyInfo, 2:i32 id),
+   dto.StaffInfo getStaffById(1:dto.CompanyInfo companyInfo, 2:i32 id),
 
-   list<dto.Staff> getStaffByName(1:dto.CompanyInfo companyInfo, 2:string name),
+   list<dto.StaffInfo> getStaffByName(1:dto.CompanyInfo companyInfo, 2:string name),
 
-   list<dto.Staff> getStaffByPinyin(1:dto.CompanyInfo companyInfo, 2:string pinyin),
+   list<dto.StaffInfo> getStaffByPinyin(1:dto.CompanyInfo companyInfo, 2:string pinyin),
 
-   dto.Staff getLastStaffBypinyin(1:dto.CompanyInfo companyInfo, 2:string pinyin),
+   dto.StaffInfo getLastStaffBypinyin(1:dto.CompanyInfo companyInfo, 2:string pinyin),
 
-   dto.AthenaResponse updateStaffById(1:dto.CompanyInfo companyInfo, 2:dto.Staff staff)
+   dto.AthenaResponse updateStaffById(1:dto.CompanyInfo companyInfo, 2:dto.StaffInfo staffInfo)
 }

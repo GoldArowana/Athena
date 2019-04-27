@@ -7,7 +7,7 @@ import com.aries.department.athena.contract.thrift.dto.CompanyInfo;
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 
-import static com.aries.department.athena.service.thrift.constant.AthenaResponseEnum.NO_PERMISION;
+import static com.aries.department.athena.service.thrift.constant.AthenaResponseEnum.NO_PERMISSION;
 
 @Getter
 public class CompanyHelper {
@@ -23,7 +23,7 @@ public class CompanyHelper {
     public CompanyHelper invoke() {
         CompanyBean companyBean = new CompanyBean(companyInfo.getName(), companyInfo.getPassword(), companyInfo.getKeyword());
         databaseName = PartnerBll.getDatabase(companyBean);
-        response = NO_PERMISION.of();
+        response = NO_PERMISSION.of();
 
         if (StringUtils.isBlank(databaseName)) {
             error = true;

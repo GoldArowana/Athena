@@ -9,7 +9,6 @@ import com.aries.department.athena.dal.repository.DepartmentRepository;
 import com.aries.department.athena.service.thrift.util.CompanyHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.thrift.TException;
 
 import java.util.Collections;
@@ -31,7 +30,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     @Override
     public AthenaResponse addDepartment(CompanyInfo companyInfo, DepartmentInfo departmentInfo) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError() || StringUtils.isBlank(companyHelper.getDatabaseName())) {
+        if (companyHelper.isError()) {
             return companyHelper.getResponse();
         }
 
@@ -48,7 +47,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     @Override
     public DepartmentInfo getDepartmentById(CompanyInfo companyInfo, int departmentId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError() || StringUtils.isBlank(companyHelper.getDatabaseName())) {
+        if (companyHelper.isError()) {
             return null;
         }
 
@@ -60,7 +59,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     @Override
     public List<DepartmentInfo> getRootDepartments(CompanyInfo companyInfo) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError() || StringUtils.isBlank(companyHelper.getDatabaseName())) {
+        if (companyHelper.isError()) {
             return Collections.emptyList();
         }
 
@@ -76,7 +75,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     @Override
     public List<DepartmentInfo> getSubDepartments(CompanyInfo companyInfo, int subDepartmentId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError() || StringUtils.isBlank(companyHelper.getDatabaseName())) {
+        if (companyHelper.isError()) {
             return Collections.emptyList();
         }
 
@@ -92,7 +91,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     @Override
     public AthenaResponse updateDepartmentNameById(CompanyInfo companyInfo, int departmentId, String newDepartmentName) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError() || StringUtils.isBlank(companyHelper.getDatabaseName())) {
+        if (companyHelper.isError()) {
             return companyHelper.getResponse();
         }
 
@@ -107,7 +106,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     @Override
     public AthenaResponse updateDepartmentLeaderById(CompanyInfo companyInfo, int departmentId, int leaderId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError() || StringUtils.isBlank(companyHelper.getDatabaseName())) {
+        if (companyHelper.isError()) {
             return companyHelper.getResponse();
         }
 
@@ -122,7 +121,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     @Override
     public AthenaResponse updateSupDepartmentById(CompanyInfo companyInfo, int departmentId, int supDepartmentId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError() || StringUtils.isBlank(companyHelper.getDatabaseName())) {
+        if (companyHelper.isError()) {
             return companyHelper.getResponse();
         }
 
