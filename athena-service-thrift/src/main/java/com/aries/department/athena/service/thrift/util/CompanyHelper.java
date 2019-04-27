@@ -23,14 +23,15 @@ public class CompanyHelper {
     public CompanyHelper invoke() {
         CompanyBean companyBean = new CompanyBean(companyInfo.getName(), companyInfo.getPassword(), companyInfo.getKeyword());
         databaseName = PartnerBll.getDatabase(companyBean);
-        response = NO_PERMISSION.of();
 
         if (StringUtils.isBlank(databaseName)) {
+            response = NO_PERMISSION.of();
             error = true;
             return this;
         }
 
         error = false;
+        response = new AthenaResponse();
         return this;
     }
 }
