@@ -11,6 +11,7 @@ public class Partner {
     private Integer id;
     private Integer companyId;
     private String companyName;
+    private String dbName;
     private String password;
     private String keyword;
     private Date insertTime;

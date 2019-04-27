@@ -8,7 +8,7 @@ struct AthenaResponse{
 struct CompanyInfo {
     1: string name,
     2: string password,
-    3: i32 keyword
+    3: string keyword
 }
 
 struct PartnerInfo {

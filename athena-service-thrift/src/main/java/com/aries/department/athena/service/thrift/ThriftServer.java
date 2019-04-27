@@ -10,6 +10,9 @@ import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TServerTransport;
 
+import static com.aries.department.athena.core.constant.ServerNameConst.DEPARTMENT;
+import static com.aries.department.athena.core.constant.ServerNameConst.STAFF;
+
 @Slf4j
 public class ThriftServer {
 
@@ -20,13 +23,13 @@ public class ThriftServer {
             { // 准备注册 DepartmentService
                 DepartmentService.Iface departmentService = new DepartmentServiceImpl();
                 DepartmentService.Processor departmentProcessor = new DepartmentService.Processor(departmentService);
-                processor.registerProcessor("DepartmentService", departmentProcessor);
+                processor.registerProcessor(DEPARTMENT, departmentProcessor);
             }
 
             { // 准备注册 StaffService
                 StaffService.Iface staffService = new StaffServiceImpl();
                 StaffService.Processor staffProcessor = new StaffService.Processor(staffService);
-                processor.registerProcessor("StaffService", staffProcessor);
+                processor.registerProcessor(STAFF, staffProcessor);
             }
 
             // 从配置文件获取端口 6001

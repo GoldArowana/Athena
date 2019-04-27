@@ -71,6 +71,30 @@ public class PartnerRepository {
         }
     }
 
+    public static String getDbNameByPassword(String companyName, String password) {
+        Partner partner = new Partner();
+        partner.setCompanyName(companyName);
+        partner.setPassword(password);
+        try (SqlSession session = SqlSessionUtil.openSession(PARTNER_DB)) {
+            // 获取Mapper
+            PartnerMapper partnerMapper = session.getMapper(PartnerMapper.class);
+
+            Example example = new Example(Partner.class);
+            example.createCriteria()
+                    .andEqualTo("companyName", companyName)
+                    .andEqualTo("password", password);
+            example.selectProperties("dbName");
+
+            List<Partner> partners = partnerMapper.selectByExample(example);
+
+            if (CollectionUtils.isNotEmpty(partners)) {
+                return partners.get(0).getDbName();
+            }
+
+            return null;
+        }
+    }
+
     public static boolean checkPassword(Partner partner) {
         if (partner == null) {
             return false;

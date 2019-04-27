@@ -10,11 +10,11 @@ service DepartmentService {
 
    dto.AthenaResponse addDepartment(1:dto.CompanyInfo companyInfo, 2:dto.DepartmentInfo departmentInfo),
 
-   list<dto.DepartmentInfo> getDepartmentById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId),
+   dto.DepartmentInfo getDepartmentById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId),
 
    list<dto.DepartmentInfo> getRootDepartments(1:dto.CompanyInfo companyInfo),
 
-   list<dto.DepartmentInfo> getSubDepartments(1:dto.CompanyInfo companyInfo, 2:i32 supDepartmentId),
+   list<dto.DepartmentInfo> getSubDepartments(1:dto.CompanyInfo companyInfo, 2:i32 subDepartmentId),
 
    dto.AthenaResponse updateDepartmentNameById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId, 3:string newDepartmentName),
 

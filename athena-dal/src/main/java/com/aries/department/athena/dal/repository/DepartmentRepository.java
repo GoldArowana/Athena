@@ -101,7 +101,7 @@ public class DepartmentRepository {
      * @param newDepartmentName 部门名
      * @return
      */
-    public static int updateDepartmentNameById(String database, Integer departmentId, String newDepartmentName) {
+    public static boolean updateDepartmentNameById(String database, Integer departmentId, String newDepartmentName) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -110,7 +110,7 @@ public class DepartmentRepository {
             department.setId(departmentId);
             department.setDepartmentName(newDepartmentName);
 
-            return departmentMapper.updateByPrimaryKeySelective(department);
+            return departmentMapper.updateByPrimaryKeySelective(department) > 0;
         }
     }
 
@@ -122,7 +122,7 @@ public class DepartmentRepository {
      * @param leaderId     部长id
      * @return
      */
-    public static int updateDepartmentLeaderById(String database, Integer departmentId, Integer leaderId) {
+    public static boolean updateDepartmentLeaderById(String database, Integer departmentId, Integer leaderId) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -131,7 +131,7 @@ public class DepartmentRepository {
             department.setId(departmentId);
             department.setLeaderId(leaderId);
 
-            return departmentMapper.updateByPrimaryKeySelective(department);
+            return departmentMapper.updateByPrimaryKeySelective(department) > 0;
         }
     }
 
@@ -143,7 +143,7 @@ public class DepartmentRepository {
      * @param supDepartmentId 上级部门id
      * @return
      */
-    public static int updateSupDepartmentById(String database, Integer departmentId, Integer supDepartmentId) {
+    public static boolean updateSupDepartmentById(String database, Integer departmentId, Integer supDepartmentId) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -152,7 +152,7 @@ public class DepartmentRepository {
             department.setId(departmentId);
             department.setUpId(supDepartmentId);
 
-            return departmentMapper.updateByPrimaryKeySelective(department);
+            return departmentMapper.updateByPrimaryKeySelective(department) > 0;
         }
     }
 }
