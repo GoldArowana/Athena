@@ -3,6 +3,9 @@ package com.aries.department.athena.service.thrift;
 import com.aries.department.athena.contract.thrift.service.DepartmentService;
 import com.aries.department.athena.contract.thrift.service.StaffService;
 import com.aries.department.athena.core.utils.PropertiesProxy;
+import com.aries.hera.client.thrift.ThriftHelper;
+import com.aries.hera.contract.thrift.dto.ServiceInfo;
+import com.aries.hera.contract.thrift.service.DiscoverService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.thrift.TMultiplexedProcessor;
 import org.apache.thrift.server.TServer;
@@ -10,8 +13,7 @@ import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TServerTransport;
 
-import static com.aries.department.athena.core.constant.ServerNameConst.DEPARTMENT;
-import static com.aries.department.athena.core.constant.ServerNameConst.STAFF;
+import static com.aries.department.athena.core.constant.ServerNameConst.*;
 
 @Slf4j
 public class ThriftServer {
@@ -35,7 +37,6 @@ public class ThriftServer {
             // 从配置文件获取端口 6001
             PropertiesProxy propertiesProxy = new PropertiesProxy("athena-service.properties");
             int port = Integer.parseInt(propertiesProxy.readProperty("port"));
-
             // 设置端口
             TServerTransport serverTransport = new TServerSocket(port);
             TServer server = new TSimpleServer(new TServer.Args(serverTransport).processor(processor));
@@ -50,6 +51,16 @@ public class ThriftServer {
                 }
             }, "thrift-service-starter-thread").start();
 
+
+            // 注册服务
+            PropertiesProxy heraProperties = new PropertiesProxy("hera-reg-service.properties");
+            String apphost = heraProperties.readProperty("apphost");
+            ServiceInfo serviceInfo = new ServiceInfo();
+            serviceInfo.setName(APPNAME);
+            serviceInfo.setHost(apphost);
+            serviceInfo.setPort(port);
+            ThriftHelper.call("hera", DiscoverService.Client.class, client -> client.registe(serviceInfo));
+//            log.info("注册服务, appname:{}, host:{}, port:{}", APPNAME, apphost, port);
         } catch (Exception x) {
             log.error("创建服务失败,error:{}", x.getMessage(), x);
         }
