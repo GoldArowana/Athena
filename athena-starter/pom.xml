@@ -48,7 +48,6 @@
             <groupId>com.aries.department</groupId>
             <artifactId>athena-service-thrift</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
     <build>
