@@ -9,6 +9,7 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DepartmentRepository {
     /**
@@ -36,7 +37,7 @@ public class DepartmentRepository {
      * @param departmentId 主部门
      * @return 主部门对应的所有子部门
      */
-    public static Department getDepartmentById(String database, Integer departmentId) {
+    public static Department getDepartmentById(String database, Long departmentId) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -58,7 +59,7 @@ public class DepartmentRepository {
      * @return
      */
     public static List<Department> getRootDepartments(String database) {
-        return getSubDepartments(database, 0);
+        return getSubDepartments(database, 0L);
     }
 
     public static List<Department> getSubDepartments(String database, Department department) {
@@ -75,7 +76,7 @@ public class DepartmentRepository {
      * @param supDepartmentId 主部门
      * @return 主部门对应的所有子部门
      */
-    public static List<Department> getSubDepartments(String database, Integer supDepartmentId) {
+    public static List<Department> getSubDepartments(String database, Long supDepartmentId) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -101,7 +102,7 @@ public class DepartmentRepository {
      * @param newDepartmentName 部门名
      * @return
      */
-    public static boolean updateDepartmentNameById(String database, Integer departmentId, String newDepartmentName) {
+    public static boolean updateDepartmentNameById(String database, Long departmentId, String newDepartmentName) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -122,7 +123,7 @@ public class DepartmentRepository {
      * @param leaderId     部长id
      * @return
      */
-    public static boolean updateDepartmentLeaderById(String database, Integer departmentId, Integer leaderId) {
+    public static boolean updateDepartmentLeaderById(String database, Long departmentId, Long leaderId) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -143,7 +144,7 @@ public class DepartmentRepository {
      * @param supDepartmentId 上级部门id
      * @return
      */
-    public static boolean updateSupDepartmentById(String database, Integer departmentId, Integer supDepartmentId) {
+    public static boolean updateSupDepartmentById(String database, Long departmentId, Long supDepartmentId) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
@@ -155,4 +156,24 @@ public class DepartmentRepository {
             return departmentMapper.updateByPrimaryKeySelective(department) > 0;
         }
     }
+
+//    public static List<Long> getUnderDepartmentIds(String database, Long departmentId) {
+//        List<Department> departmentList = getUnderDepartments(database, departmentId);
+//        if (CollectionUtils.isEmpty(departmentList)) {
+//            return Collections.emptyList();
+//        }
+//        return departmentList.stream().map(Department::getId).collect(Collectors.toList());
+//    }
+//
+//    public static List<Department> getUnderDepartments(String database, Long departmentId) {
+//        try (SqlSession session = SqlSessionUtil.openSession(database)) {
+//            // 获取Mapper
+//            DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
+//
+//            Example example = new Example(Department.class);
+//            example.createCriteria().andEqualTo("upId", departmentId);
+//            List<Department> departmentList = departmentMapper.selectByExample(example);
+//            return CollectionUtils.isEmpty(departmentList) ? Collections.emptyList() : departmentList;
+//        }
+//    }
 }

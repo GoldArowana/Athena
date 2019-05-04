@@ -17,9 +17,6 @@ public enum AthenaResponseEnum {
     }
 
     public AthenaResponse of() {
-        return new AthenaResponse() {{
-            setCode(code);
-            setMessage(message);
-        }};
+        return new AthenaResponse(code, message);
     }
 }

@@ -25,7 +25,7 @@ create table athena_aries.staff
 	department_id int null comment '所属部门id',
 	country_id smallint(6) null comment '国家编码。',
 	city_id int null comment '城市id',
-	gaea_id varchar(20) null comment '员工账号',
+	gaea_account varchar(20) null comment '员工账号',
 	employee_id varchar(40) null comment '员工号',
 	identity_id int null comment '身份id。对应身份表里的身份信息。在中国指的是身份证相关信息。',
 	address varchar(20) null comment '现住址',
@@ -33,6 +33,6 @@ create table athena_aries.staff
 )
 comment '员工信息';
 
-create index staff_gaea_id_index
-	on athena_aries.staff (gaea_id);
+create index staff_gaea_account_index
+	on athena_aries.staff (gaea_account);
 

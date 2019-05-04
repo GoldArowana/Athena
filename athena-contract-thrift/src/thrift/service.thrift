@@ -10,17 +10,19 @@ service DepartmentService {
 
    dto.AthenaResponse addDepartment(1:dto.CompanyInfo companyInfo, 2:dto.DepartmentInfo departmentInfo),
 
-   dto.DepartmentInfo getDepartmentById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId),
+   dto.DepartmentInfo getDepartmentById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId),
 
    list<dto.DepartmentInfo> getRootDepartments(1:dto.CompanyInfo companyInfo),
 
-   list<dto.DepartmentInfo> getSubDepartments(1:dto.CompanyInfo companyInfo, 2:i32 subDepartmentId),
+   list<dto.DepartmentInfo> getSubDepartments(1:dto.CompanyInfo companyInfo, 2:i64 subDepartmentId),
 
-   dto.AthenaResponse updateDepartmentNameById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId, 3:string newDepartmentName),
+   dto.AthenaResponse updateDepartmentNameById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:string newDepartmentName),
 
-   dto.AthenaResponse updateDepartmentLeaderById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId, 3:i32 leaderId),
+   dto.AthenaResponse updateDepartmentLeaderById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:i64 leaderId),
 
-   dto.AthenaResponse updateSupDepartmentById(1:dto.CompanyInfo companyInfo, 2:i32 departmentId, 3:i32 supDepartmentId)
+   dto.AthenaResponse updateSupDepartmentById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:i64 supDepartmentId),
+
+   list<dto.DepartmentInfo> getUnderDepartments(1:dto.CompanyInfo companyInfo, 2:i64 departmentId),
 }
 
 service StaffService {
@@ -38,5 +40,9 @@ service StaffService {
 
    dto.StaffInfo getLastStaffBypinyin(1:dto.CompanyInfo companyInfo, 2:string pinyin),
 
-   dto.AthenaResponse updateStaffById(1:dto.CompanyInfo companyInfo, 2:dto.StaffInfo staffInfo)
+   dto.AthenaResponse updateStaffById(1:dto.CompanyInfo companyInfo, 2:dto.StaffInfo staffInfo),
+
+   list<dto.StaffInfo> getStaffByDepartmentId(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:i32 pageNum, 4:i32 pageSize),
+
+   i64 getStaffCountByDepartmentId(1:dto.CompanyInfo companyInfo, 2:i64 departmentId),
 }

@@ -41,7 +41,7 @@ public class StaffRepository {
      *
      * @param database 数据库名
      * @param staff    员工信息
-     * @return 0失败，原因未知。1失败，生成gaeaId失败。2不成功，参数错误。3成功。4不成功,希望调用方重试。
+     * @return 0失败，原因未知。1失败，生成gaeaAccount失败。2不成功，参数错误。3成功。4不成功,希望调用方重试。
      */
     public static int addStaff(String database, Staff staff) {
         if (staff == null) {
@@ -49,7 +49,7 @@ public class StaffRepository {
         }
 
         try {
-            staff.setGaeaId(getNextGaeaIdByName(database, staff.getFullname()));
+            staff.setGaeaAccount(getNextGaeaAccountByName(database, staff.getFullname()));
         } catch (GenIdException e) {
             return FAIL.code();
         }
@@ -63,7 +63,7 @@ public class StaffRepository {
                 effective = staffMapper.insertSelective(staff);
             } catch (PersistenceException e) {
                 String template = "java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '%s' for key 'staff_gaea_id_uindex'";
-                String cause = String.format(template, staff.getGaeaId());
+                String cause = String.format(template, staff.getGaeaAccount());
                 if (cause.equals(e.getCause().toString())) {
                     return NEED_RECALL.code();
                 }
@@ -126,7 +126,7 @@ public class StaffRepository {
             // 获取Mapper
             StaffMapper staffMapper = session.getMapper(StaffMapper.class);
             Example example = new Example(Staff.class);
-            example.createCriteria().andLike("gaeaId", pinyin + "%");
+            example.createCriteria().andLike("gaeaAccount", pinyin + "%");
             List<Staff> staffList = staffMapper.selectByExample(example);
 
             // 防止返回null
@@ -151,8 +151,8 @@ public class StaffRepository {
             // 获取Mapper
             StaffMapper staffMapper = session.getMapper(StaffMapper.class);
             Example example = new Example(Staff.class);
-            example.createCriteria().andLike("gaeaId", pinyin + "%");
-            example.orderBy("gaeaId").desc();
+            example.createCriteria().andLike("gaeaAccount", pinyin + "%");
+            example.orderBy("gaeaAccount").desc();
             List<Staff> staffList = staffMapper.selectByExampleAndRowBounds(example, new RowBounds(0, 1));
             if (CollectionUtils.isEmpty(staffList)) {
                 return null;
@@ -162,42 +162,42 @@ public class StaffRepository {
     }
 
     /**
-     * 为新入职员工新建gaeaId。例如，现已有"jinlong01","jinlong02"，那么又有叫"金龙"的员工入职时，新的gaeaId就是"jinlong03"
+     * 为新入职员工新建gaeaAccount。例如，现已有"jinlong01","jinlong02"，那么又有叫"金龙"的员工入职时，新的gaeaAccount就是"jinlong03"
      *
      * @param database 数据库名
      * @param name     名字，例如"金龙"
-     * @return 下一个gaeaId值
+     * @return 下一个gaeaAccount值
      * @throws GenIdException
      */
-    public static String getNextGaeaIdByName(String database, String name) throws GenIdException {
+    public static String getNextGaeaAccountByName(String database, String name) throws GenIdException {
         try {
-            return getNextGaeaIdByPinyin(database, PinyinUtil.toPinyin(name, false));
+            return getNextGaeaAccountByPinyin(database, PinyinUtil.toPinyin(name, false));
         } catch (BadHanyuPinyinOutputFormatCombination badHanyuPinyinOutputFormatCombination) {
-            throw new GenIdException("生成gaeaId失败", badHanyuPinyinOutputFormatCombination);
+            throw new GenIdException("生成gaeaAccount失败", badHanyuPinyinOutputFormatCombination);
         }
     }
 
     /**
-     * 为新入职员工新建gaeaId。例如，现已有"jinlong01","jinlong02"，那么又有叫"jinlong"的员工入职时，新的gaeaId就是"jinlong03"
-     * {@code getNextGaeaIdByName()} 和{@code getNextGaeaIdByPinyin()}区别就是入参不同：一个是中文名，一个是名字的拼音。
+     * 为新入职员工新建gaeaAccount。例如，现已有"jinlong01","jinlong02"，那么又有叫"jinlong"的员工入职时，新的gaeaAccount就是"jinlong03"
+     * {@code getNextGaeaAccountByName()} 和{@code getNextGaeaAccountByPinyin()}区别就是入参不同：一个是中文名，一个是名字的拼音。
      *
      * @param database 数据库名
      * @param pinyin   名字，例如"jinlong"
-     * @return 下一个gaeaId值
+     * @return 下一个gaeaAccount值
      * @throws GenIdException
      */
-    public static String getNextGaeaIdByPinyin(String database, String pinyin) {
+    public static String getNextGaeaAccountByPinyin(String database, String pinyin) {
         Staff lastStaffBypinyin = getLastStaffBypinyin(database, pinyin);
         if (lastStaffBypinyin == null) {
             return pinyin + "01";
         }
 
-        String lastStaffGaeaId = lastStaffBypinyin.getGaeaId();
+        String lastStaffGaeaAccount = lastStaffBypinyin.getGaeaAccount();
 
-        // 把gaeaId的数字提取出来
+        // 把gaeaAccount的数字提取出来
         StringBuilder numberBuilder = new StringBuilder();
-        for (int i = 0; i < lastStaffGaeaId.length(); i++) {
-            char at = lastStaffGaeaId.charAt(i);
+        for (int i = 0; i < lastStaffGaeaAccount.length(); i++) {
+            char at = lastStaffGaeaAccount.charAt(i);
             if (at >= '0' && at <= '9') {
                 numberBuilder.append(at);
             }
@@ -219,6 +219,35 @@ public class StaffRepository {
             int effect = staffMapper.updateByPrimaryKeySelective(staff);
 
             return effect > 0;
+        }
+    }
+
+    public static List<Staff> batchGetStaffByDepartmentId(String database, long departmentId, int pageNum, int pageSize) {
+        try (SqlSession session = SqlSessionUtil.openSession(database)) {
+            // 获取Mapper
+            StaffMapper staffMapper = session.getMapper(StaffMapper.class);
+
+            Example example = new Example(Staff.class);
+            example.createCriteria().andEqualTo("departmentId", departmentId);
+            example.orderBy("id").asc();
+            int offset = (pageNum - 1) * pageSize;
+            int limit = pageSize;
+            List<Staff> staffList = staffMapper.selectByExampleAndRowBounds(example, new RowBounds(offset, limit));
+
+            // 防止返回null
+            return CollectionUtils.isEmpty(staffList) ? Collections.emptyList() : staffList;
+        }
+    }
+
+    public static long getStaffCountByDepartmentId(String database, long departmentId) {
+        try (SqlSession session = SqlSessionUtil.openSession(database)) {
+            // 获取Mapper
+            StaffMapper staffMapper = session.getMapper(StaffMapper.class);
+
+            Example example = new Example(Staff.class);
+            example.createCriteria().andEqualTo("departmentId", departmentId);
+
+            return staffMapper.selectCountByExample(example);
         }
     }
 }

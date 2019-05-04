@@ -45,7 +45,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     }
 
     @Override
-    public DepartmentInfo getDepartmentById(CompanyInfo companyInfo, int departmentId) throws TException {
+    public DepartmentInfo getDepartmentById(CompanyInfo companyInfo, long departmentId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {
             return null;
@@ -73,7 +73,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     }
 
     @Override
-    public List<DepartmentInfo> getSubDepartments(CompanyInfo companyInfo, int subDepartmentId) throws TException {
+    public List<DepartmentInfo> getSubDepartments(CompanyInfo companyInfo, long subDepartmentId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {
             return Collections.emptyList();
@@ -89,7 +89,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     }
 
     @Override
-    public AthenaResponse updateDepartmentNameById(CompanyInfo companyInfo, int departmentId, String newDepartmentName) throws TException {
+    public AthenaResponse updateDepartmentNameById(CompanyInfo companyInfo, long departmentId, String newDepartmentName) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {
             return companyHelper.getResponse();
@@ -104,7 +104,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     }
 
     @Override
-    public AthenaResponse updateDepartmentLeaderById(CompanyInfo companyInfo, int departmentId, int leaderId) throws TException {
+    public AthenaResponse updateDepartmentLeaderById(CompanyInfo companyInfo, long departmentId, long leaderId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {
             return companyHelper.getResponse();
@@ -119,7 +119,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     }
 
     @Override
-    public AthenaResponse updateSupDepartmentById(CompanyInfo companyInfo, int departmentId, int supDepartmentId) throws TException {
+    public AthenaResponse updateSupDepartmentById(CompanyInfo companyInfo, long departmentId, long supDepartmentId) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {
             return companyHelper.getResponse();
@@ -131,6 +131,17 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         } catch (Exception e) {
             return ERROR.of();
         }
+    }
+
+    @Override
+    public List<DepartmentInfo> getUnderDepartments(CompanyInfo companyInfo, long departmentId) throws TException {
+        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
+        if (companyHelper.isError()) {
+            return Collections.emptyList();
+        }
+
+        List<Department> departmentList = DepartmentRepository.getUnderDepartments(companyHelper.getDatabaseName(), departmentId);
+        return conver2DepartmentInfo(departmentList);
     }
 
 

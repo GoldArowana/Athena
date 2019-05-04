@@ -7,8 +7,8 @@ import javax.persistence.Id;
 @Data
 public class Department {
     @Id
-    private Integer id;
+    private Long id;
     private String departmentName;
-    private Integer leaderId; //部门管理者，部长,
-    private Integer upId; //上级部门id
+    private Long leaderId; //部门管理者，部长,
+    private Long upId; //上级部门id
 }

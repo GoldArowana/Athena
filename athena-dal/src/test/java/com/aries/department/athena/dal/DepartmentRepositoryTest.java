@@ -11,13 +11,13 @@ public class DepartmentRepositoryTest {
     public void addDepartmentTest() {
         Department department = new Department();
         department.setDepartmentName("酒店后勤1组");
-        department.setUpId(3);
+        department.setUpId(3L);
 //        DepartmentRepository.addDepartment("athena_aries",department);
     }
 
     @Test
     public void getDepartmentTest() {
-        Department department = DepartmentRepository.getDepartmentById("athena_aries", 1);
+        Department department = DepartmentRepository.getDepartmentById("athena_aries", 1L);
         System.out.println(department);
     }
 
@@ -29,28 +29,28 @@ public class DepartmentRepositoryTest {
 
     @Test
     public void getSubDepartmentsTest() {
-        List<Department> departments = DepartmentRepository.getSubDepartments("athena_aries", 1);
+        List<Department> departments = DepartmentRepository.getSubDepartments("athena_aries", 1L);
         System.out.println(departments);
     }
 
     @Test
     public void updateDepartmentNameTest() {
-        DepartmentRepository.updateDepartmentNameById("athena_aries", 4, "酒店后勤2组");
-        Department department = DepartmentRepository.getDepartmentById("athena_aries", 4);
+        DepartmentRepository.updateDepartmentNameById("athena_aries", 4L, "酒店后勤2组");
+        Department department = DepartmentRepository.getDepartmentById("athena_aries", 4L);
         System.out.println(department);
     }
 
     @Test
     public void updateDepartmentLeaderTest() {
-        DepartmentRepository.updateDepartmentLeaderById("athena_aries", 4, 1);
-        Department department = DepartmentRepository.getDepartmentById("athena_aries", 4);
+        DepartmentRepository.updateDepartmentLeaderById("athena_aries", 4L, 1L);
+        Department department = DepartmentRepository.getDepartmentById("athena_aries", 4L);
         System.out.println(department);
     }
 
     @Test
     public void updateSupDepartmentTest() {
-        DepartmentRepository.updateSupDepartmentById("athena_aries", 2, 0);
-        Department department = DepartmentRepository.getDepartmentById("athena_aries", 2);
+        DepartmentRepository.updateSupDepartmentById("athena_aries", 2L, 0L);
+        Department department = DepartmentRepository.getDepartmentById("athena_aries", 2L);
         System.out.println(department);
     }
 }

@@ -109,6 +109,25 @@ public class StaffServiceImpl implements StaffService.Iface {
         }
     }
 
+    @Override
+    public List<StaffInfo> getStaffByDepartmentId(CompanyInfo companyInfo, long departmentId, int pageNum, int pageSize) throws TException {
+        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
+        if (companyHelper.isError()) {
+            return Collections.emptyList();
+        }
+        List<Staff> staffList = StaffRepository.batchGetStaffByDepartmentId(companyHelper.getDatabaseName(), departmentId, pageNum, pageSize);
+        return conver2StaffInfo(staffList);
+    }
+
+    @Override
+    public long getStaffCountByDepartmentId(CompanyInfo companyInfo, long departmentId) throws TException {
+        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
+        if (companyHelper.isError()) {
+            return 0L;
+        }
+        return StaffRepository.getStaffCountByDepartmentId(companyHelper.getDatabaseName(), departmentId);
+    }
+
 
     private static Staff conver2Staff(StaffInfo staffInfo) {
         Staff staff = new Staff();
@@ -125,7 +144,7 @@ public class StaffServiceImpl implements StaffService.Iface {
         staff.setDepartmentId(staffInfo.getDepartmentId());
         staff.setCountryId(staffInfo.getCountryId());
         staff.setCityId(staffInfo.getCityId());
-        staff.setGaeaId(staffInfo.getGaeaId());
+        staff.setGaeaAccount(staffInfo.getGaeaAccount());
         staff.setEmployeeId(staffInfo.getEmployeeId());
         staff.setIdentityId(staffInfo.getIdentityId());
         staff.setAddress(staffInfo.getAddress());
@@ -136,6 +155,7 @@ public class StaffServiceImpl implements StaffService.Iface {
 
     private static StaffInfo conver2StaffInfo(Staff staff) {
         StaffInfo staffInfo = new StaffInfo();
+
         staffInfo.setId(staff.getId());
         staffInfo.setFullname(staff.getFullname());
         staffInfo.setAliasName(staff.getAliasName());
@@ -149,7 +169,7 @@ public class StaffServiceImpl implements StaffService.Iface {
         staffInfo.setDepartmentId(staff.getDepartmentId());
         staffInfo.setCountryId(staff.getCountryId());
         staffInfo.setCityId(staff.getCityId());
-        staffInfo.setGaeaId(staff.getGaeaId());
+        staffInfo.setGaeaAccount(staff.getGaeaAccount());
         staffInfo.setEmployeeId(staff.getEmployeeId());
         staffInfo.setIdentityId(staff.getIdentityId());
         staffInfo.setAddress(staff.getAddress());
@@ -158,12 +178,12 @@ public class StaffServiceImpl implements StaffService.Iface {
         return staffInfo;
     }
 
-    private static List<StaffInfo> conver2StaffInfo(List<Staff> departments) {
-        if (CollectionUtils.isEmpty(departments)) {
+    private static List<StaffInfo> conver2StaffInfo(List<Staff> staffList) {
+        if (CollectionUtils.isEmpty(staffList)) {
             return Collections.emptyList();
         }
 
-        return departments.stream()
+        return staffList.stream()
                 .map(StaffServiceImpl::conver2StaffInfo)
                 .collect(Collectors.toList());
     }
