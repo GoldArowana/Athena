@@ -13,6 +13,7 @@ import org.apache.thrift.TException;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.aries.department.athena.service.thrift.constant.AthenaResponseEnum.*;
@@ -133,16 +134,16 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         }
     }
 
-    @Override
-    public List<DepartmentInfo> getUnderDepartments(CompanyInfo companyInfo, long departmentId) throws TException {
-        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
-        if (companyHelper.isError()) {
-            return Collections.emptyList();
-        }
-
-        List<Department> departmentList = DepartmentRepository.getUnderDepartments(companyHelper.getDatabaseName(), departmentId);
-        return conver2DepartmentInfo(departmentList);
-    }
+//    @Override
+//    public List<DepartmentInfo> getUnderDepartments(CompanyInfo companyInfo, long departmentId) throws TException {
+//        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
+//        if (companyHelper.isError()) {
+//            return Collections.emptyList();
+//        }
+//
+//        List<Department> departmentList = DepartmentRepository.gets(companyHelper.getDatabaseName(), departmentId);
+//        return conver2DepartmentInfo(departmentList);
+//    }
 
 
     private static Department conver2Department(DepartmentInfo departmentInfo) {
@@ -156,9 +157,9 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
 
     private static DepartmentInfo conver2DepartmentInfo(Department department) {
         return new DepartmentInfo() {{
-            setId(department.getId());
-            setUpId(department.getUpId());
-            setLeaderId(department.getLeaderId());
+            setId(Optional.ofNullable(department.getId()).orElse(0L));
+            setUpId(Optional.ofNullable(department.getUpId()).orElse(0L));
+            setLeaderId(Optional.ofNullable(department.getLeaderId()).orElse(0L));
             setDepartmentName(department.getDepartmentName());
         }};
     }

@@ -14,6 +14,7 @@ import org.apache.thrift.TException;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.aries.department.athena.service.thrift.constant.AthenaResponseEnum.*;
@@ -131,7 +132,7 @@ public class StaffServiceImpl implements StaffService.Iface {
 
     private static Staff conver2Staff(StaffInfo staffInfo) {
         Staff staff = new Staff();
-        staff.setId(staffInfo.getId());
+//        staff.setId(staffInfo.getId());
         staff.setFullname(staffInfo.getFullname());
         staff.setAliasName(staffInfo.getAliasName());
         staff.setSex(staffInfo.getSex());
@@ -159,21 +160,21 @@ public class StaffServiceImpl implements StaffService.Iface {
         staffInfo.setId(staff.getId());
         staffInfo.setFullname(staff.getFullname());
         staffInfo.setAliasName(staff.getAliasName());
-        staffInfo.setSex(staff.getSex());
+        staffInfo.setSex(Optional.ofNullable(staff.getSex()).orElse(Short.valueOf("0")));
         staffInfo.setEmail(staff.getEmail());
         staffInfo.setPhone(staff.getPhone());
         staffInfo.setQq(staff.getQq());
         staffInfo.setWechat(staff.getWechat());
         staffInfo.setJobLevel(staff.getJobLevel());
-        staffInfo.setJobGroup(staff.getJobGroup());
-        staffInfo.setDepartmentId(staff.getDepartmentId());
-        staffInfo.setCountryId(staff.getCountryId());
-        staffInfo.setCityId(staff.getCityId());
+        staffInfo.setJobGroup(Optional.ofNullable(staff.getJobGroup()).orElse(0));
+        staffInfo.setDepartmentId(Optional.ofNullable(staff.getDepartmentId()).orElse(0));
+        staffInfo.setCountryId(Optional.ofNullable(staff.getCountryId()).orElse(Short.valueOf("0")));
+        staffInfo.setCityId(Optional.ofNullable(staff.getCityId()).orElse(0));
         staffInfo.setGaeaAccount(staff.getGaeaAccount());
         staffInfo.setEmployeeId(staff.getEmployeeId());
-        staffInfo.setIdentityId(staff.getIdentityId());
+        staffInfo.setIdentityId(Optional.ofNullable(staff.getIdentityId()).orElse(0));
         staffInfo.setAddress(staff.getAddress());
-        staffInfo.setOnJob(staff.getOnJob());
+        staffInfo.setOnJob(Optional.ofNullable(staff.getOnJob()).orElse(true));
         staffInfo.setJoinTime(staff.getJoinTime().toString());
         return staffInfo;
     }
