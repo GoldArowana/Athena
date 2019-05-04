@@ -2,9 +2,6 @@ package com.aries.department.athena.client.thrift;
 
 import com.aries.department.athena.contract.thrift.service.DepartmentService;
 import com.aries.hera.client.thrift.ThriftHelper;
-import com.aries.hera.client.thrift.exception.ServiceNotFoundException;
-import com.aries.hera.client.thrift.function.Try;
-import org.apache.thrift.transport.TTransportException;
 import org.junit.Test;
 
 public class StaffServiceTest {
@@ -30,7 +27,7 @@ public class StaffServiceTest {
 //            return "";
 //        });
 //        System.out.println(athena);
-        ThriftHelper.call("athena", DepartmentService.Client.class,client->client.ping());
+        ThriftHelper.call("athena", DepartmentService.Client.class, client -> client.ping());
     }
 
 }

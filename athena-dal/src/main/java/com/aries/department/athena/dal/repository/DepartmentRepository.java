@@ -9,7 +9,6 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class DepartmentRepository {
     /**
