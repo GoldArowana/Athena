@@ -34,8 +34,8 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
   private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new StaffInfoStandardSchemeFactory();
   private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new StaffInfoTupleSchemeFactory();
 
-  public long id; // required
-  public @org.apache.thrift.annotation.Nullable java.lang.String fullname; // required
+  public long id; // optional
+  public @org.apache.thrift.annotation.Nullable java.lang.String fullname; // optional
   public @org.apache.thrift.annotation.Nullable java.lang.String aliasName; // optional
   public short sex; // optional
   public @org.apache.thrift.annotation.Nullable java.lang.String email; // optional
@@ -178,13 +178,13 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
   private static final int __CITYID_ISSET_ID = 6;
   private static final int __IDENTITYID_ISSET_ID = 7;
   private byte __isset_bitfield = 0;
-  private static final _Fields optionals[] = {_Fields.ALIAS_NAME,_Fields.SEX,_Fields.EMAIL,_Fields.PHONE,_Fields.QQ,_Fields.WECHAT,_Fields.JOB_LEVEL,_Fields.JOB_GROUP,_Fields.ON_JOB,_Fields.DEPARTMENT_ID,_Fields.COUNTRY_ID,_Fields.CITY_ID,_Fields.GAEA_ACCOUNT,_Fields.EMPLOYEE_ID,_Fields.IDENTITY_ID,_Fields.ADDRESS,_Fields.JOIN_TIME};
+  private static final _Fields optionals[] = {_Fields.ID,_Fields.FULLNAME,_Fields.ALIAS_NAME,_Fields.SEX,_Fields.EMAIL,_Fields.PHONE,_Fields.QQ,_Fields.WECHAT,_Fields.JOB_LEVEL,_Fields.JOB_GROUP,_Fields.ON_JOB,_Fields.DEPARTMENT_ID,_Fields.COUNTRY_ID,_Fields.CITY_ID,_Fields.GAEA_ACCOUNT,_Fields.EMPLOYEE_ID,_Fields.IDENTITY_ID,_Fields.ADDRESS,_Fields.JOIN_TIME};
   public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
   static {
     java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
-    tmpMap.put(_Fields.ID, new org.apache.thrift.meta_data.FieldMetaData("id", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+    tmpMap.put(_Fields.ID, new org.apache.thrift.meta_data.FieldMetaData("id", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I64)));
-    tmpMap.put(_Fields.FULLNAME, new org.apache.thrift.meta_data.FieldMetaData("fullname", org.apache.thrift.TFieldRequirementType.REQUIRED, 
+    tmpMap.put(_Fields.FULLNAME, new org.apache.thrift.meta_data.FieldMetaData("fullname", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
     tmpMap.put(_Fields.ALIAS_NAME, new org.apache.thrift.meta_data.FieldMetaData("aliasName", org.apache.thrift.TFieldRequirementType.OPTIONAL, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
@@ -225,16 +225,6 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
   }
 
   public StaffInfo() {
-  }
-
-  public StaffInfo(
-    long id,
-    java.lang.String fullname)
-  {
-    this();
-    this.id = id;
-    setIdIsSet(true);
-    this.fullname = fullname;
   }
 
   /**
@@ -1064,8 +1054,8 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
     if (this == that)
       return true;
 
-    boolean this_present_id = true;
-    boolean that_present_id = true;
+    boolean this_present_id = true && this.isSetId();
+    boolean that_present_id = true && that.isSetId();
     if (this_present_id || that_present_id) {
       if (!(this_present_id && that_present_id))
         return false;
@@ -1242,7 +1232,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
   public int hashCode() {
     int hashCode = 1;
 
-    hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(id);
+    hashCode = hashCode * 8191 + ((isSetId()) ? 131071 : 524287);
+    if (isSetId())
+      hashCode = hashCode * 8191 + org.apache.thrift.TBaseHelper.hashCode(id);
 
     hashCode = hashCode * 8191 + ((isSetFullname()) ? 131071 : 524287);
     if (isSetFullname())
@@ -1538,17 +1530,21 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
     java.lang.StringBuilder sb = new java.lang.StringBuilder("StaffInfo(");
     boolean first = true;
 
-    sb.append("id:");
-    sb.append(this.id);
-    first = false;
-    if (!first) sb.append(", ");
-    sb.append("fullname:");
-    if (this.fullname == null) {
-      sb.append("null");
-    } else {
-      sb.append(this.fullname);
+    if (isSetId()) {
+      sb.append("id:");
+      sb.append(this.id);
+      first = false;
     }
-    first = false;
+    if (isSetFullname()) {
+      if (!first) sb.append(", ");
+      sb.append("fullname:");
+      if (this.fullname == null) {
+        sb.append("null");
+      } else {
+        sb.append(this.fullname);
+      }
+      first = false;
+    }
     if (isSetAliasName()) {
       if (!first) sb.append(", ");
       sb.append("aliasName:");
@@ -1697,10 +1693,6 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
 
   public void validate() throws org.apache.thrift.TException {
     // check for required fields
-    // alas, we cannot check 'id' because it's a primitive and you chose the non-beans generator.
-    if (fullname == null) {
-      throw new org.apache.thrift.protocol.TProtocolException("Required field 'fullname' was not present! Struct: " + toString());
-    }
     // check for sub-struct validity
   }
 
@@ -1900,9 +1892,6 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
       iprot.readStructEnd();
 
       // check for required fields of primitive type, which can't be checked in the validate method
-      if (!struct.isSetId()) {
-        throw new org.apache.thrift.protocol.TProtocolException("Required field 'id' was not found in serialized data! Struct: " + toString());
-      }
       struct.validate();
     }
 
@@ -1910,13 +1899,17 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
       struct.validate();
 
       oprot.writeStructBegin(STRUCT_DESC);
-      oprot.writeFieldBegin(ID_FIELD_DESC);
-      oprot.writeI64(struct.id);
-      oprot.writeFieldEnd();
-      if (struct.fullname != null) {
-        oprot.writeFieldBegin(FULLNAME_FIELD_DESC);
-        oprot.writeString(struct.fullname);
+      if (struct.isSetId()) {
+        oprot.writeFieldBegin(ID_FIELD_DESC);
+        oprot.writeI64(struct.id);
         oprot.writeFieldEnd();
+      }
+      if (struct.fullname != null) {
+        if (struct.isSetFullname()) {
+          oprot.writeFieldBegin(FULLNAME_FIELD_DESC);
+          oprot.writeString(struct.fullname);
+          oprot.writeFieldEnd();
+        }
       }
       if (struct.aliasName != null) {
         if (struct.isSetAliasName()) {
@@ -2040,61 +2033,71 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
     @Override
     public void write(org.apache.thrift.protocol.TProtocol prot, StaffInfo struct) throws org.apache.thrift.TException {
       org.apache.thrift.protocol.TTupleProtocol oprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
-      oprot.writeI64(struct.id);
-      oprot.writeString(struct.fullname);
       java.util.BitSet optionals = new java.util.BitSet();
-      if (struct.isSetAliasName()) {
+      if (struct.isSetId()) {
         optionals.set(0);
       }
-      if (struct.isSetSex()) {
+      if (struct.isSetFullname()) {
         optionals.set(1);
       }
-      if (struct.isSetEmail()) {
+      if (struct.isSetAliasName()) {
         optionals.set(2);
       }
-      if (struct.isSetPhone()) {
+      if (struct.isSetSex()) {
         optionals.set(3);
       }
-      if (struct.isSetQq()) {
+      if (struct.isSetEmail()) {
         optionals.set(4);
       }
-      if (struct.isSetWechat()) {
+      if (struct.isSetPhone()) {
         optionals.set(5);
       }
-      if (struct.isSetJobLevel()) {
+      if (struct.isSetQq()) {
         optionals.set(6);
       }
-      if (struct.isSetJobGroup()) {
+      if (struct.isSetWechat()) {
         optionals.set(7);
       }
-      if (struct.isSetOnJob()) {
+      if (struct.isSetJobLevel()) {
         optionals.set(8);
       }
-      if (struct.isSetDepartmentId()) {
+      if (struct.isSetJobGroup()) {
         optionals.set(9);
       }
-      if (struct.isSetCountryId()) {
+      if (struct.isSetOnJob()) {
         optionals.set(10);
       }
-      if (struct.isSetCityId()) {
+      if (struct.isSetDepartmentId()) {
         optionals.set(11);
       }
-      if (struct.isSetGaeaAccount()) {
+      if (struct.isSetCountryId()) {
         optionals.set(12);
       }
-      if (struct.isSetEmployeeId()) {
+      if (struct.isSetCityId()) {
         optionals.set(13);
       }
-      if (struct.isSetIdentityId()) {
+      if (struct.isSetGaeaAccount()) {
         optionals.set(14);
       }
-      if (struct.isSetAddress()) {
+      if (struct.isSetEmployeeId()) {
         optionals.set(15);
       }
-      if (struct.isSetJoinTime()) {
+      if (struct.isSetIdentityId()) {
         optionals.set(16);
       }
-      oprot.writeBitSet(optionals, 17);
+      if (struct.isSetAddress()) {
+        optionals.set(17);
+      }
+      if (struct.isSetJoinTime()) {
+        optionals.set(18);
+      }
+      oprot.writeBitSet(optionals, 19);
+      if (struct.isSetId()) {
+        oprot.writeI64(struct.id);
+      }
+      if (struct.isSetFullname()) {
+        oprot.writeString(struct.fullname);
+      }
       if (struct.isSetAliasName()) {
         oprot.writeString(struct.aliasName);
       }
@@ -2151,76 +2154,80 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
     @Override
     public void read(org.apache.thrift.protocol.TProtocol prot, StaffInfo struct) throws org.apache.thrift.TException {
       org.apache.thrift.protocol.TTupleProtocol iprot = (org.apache.thrift.protocol.TTupleProtocol) prot;
-      struct.id = iprot.readI64();
-      struct.setIdIsSet(true);
-      struct.fullname = iprot.readString();
-      struct.setFullnameIsSet(true);
-      java.util.BitSet incoming = iprot.readBitSet(17);
+      java.util.BitSet incoming = iprot.readBitSet(19);
       if (incoming.get(0)) {
+        struct.id = iprot.readI64();
+        struct.setIdIsSet(true);
+      }
+      if (incoming.get(1)) {
+        struct.fullname = iprot.readString();
+        struct.setFullnameIsSet(true);
+      }
+      if (incoming.get(2)) {
         struct.aliasName = iprot.readString();
         struct.setAliasNameIsSet(true);
       }
-      if (incoming.get(1)) {
+      if (incoming.get(3)) {
         struct.sex = iprot.readI16();
         struct.setSexIsSet(true);
       }
-      if (incoming.get(2)) {
+      if (incoming.get(4)) {
         struct.email = iprot.readString();
         struct.setEmailIsSet(true);
       }
-      if (incoming.get(3)) {
+      if (incoming.get(5)) {
         struct.phone = iprot.readString();
         struct.setPhoneIsSet(true);
       }
-      if (incoming.get(4)) {
+      if (incoming.get(6)) {
         struct.qq = iprot.readString();
         struct.setQqIsSet(true);
       }
-      if (incoming.get(5)) {
+      if (incoming.get(7)) {
         struct.wechat = iprot.readString();
         struct.setWechatIsSet(true);
       }
-      if (incoming.get(6)) {
+      if (incoming.get(8)) {
         struct.jobLevel = iprot.readString();
         struct.setJobLevelIsSet(true);
       }
-      if (incoming.get(7)) {
+      if (incoming.get(9)) {
         struct.jobGroup = iprot.readI32();
         struct.setJobGroupIsSet(true);
       }
-      if (incoming.get(8)) {
+      if (incoming.get(10)) {
         struct.onJob = iprot.readBool();
         struct.setOnJobIsSet(true);
       }
-      if (incoming.get(9)) {
+      if (incoming.get(11)) {
         struct.departmentId = iprot.readI32();
         struct.setDepartmentIdIsSet(true);
       }
-      if (incoming.get(10)) {
+      if (incoming.get(12)) {
         struct.countryId = iprot.readI16();
         struct.setCountryIdIsSet(true);
       }
-      if (incoming.get(11)) {
+      if (incoming.get(13)) {
         struct.cityId = iprot.readI32();
         struct.setCityIdIsSet(true);
       }
-      if (incoming.get(12)) {
+      if (incoming.get(14)) {
         struct.gaeaAccount = iprot.readString();
         struct.setGaeaAccountIsSet(true);
       }
-      if (incoming.get(13)) {
+      if (incoming.get(15)) {
         struct.employeeId = iprot.readString();
         struct.setEmployeeIdIsSet(true);
       }
-      if (incoming.get(14)) {
+      if (incoming.get(16)) {
         struct.identityId = iprot.readI32();
         struct.setIdentityIdIsSet(true);
       }
-      if (incoming.get(15)) {
+      if (incoming.get(17)) {
         struct.address = iprot.readString();
         struct.setAddressIsSet(true);
       }
-      if (incoming.get(16)) {
+      if (incoming.get(18)) {
         struct.joinTime = iprot.readString();
         struct.setJoinTimeIsSet(true);
       }
