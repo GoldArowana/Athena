@@ -40,7 +40,7 @@ service StaffService {
 
    dto.StaffInfo getLastStaffBypinyin(1:dto.CompanyInfo companyInfo, 2:string pinyin),
 
-   dto.AthenaResponse updateStaffById(1:dto.CompanyInfo companyInfo, 2:dto.StaffInfo staffInfo),
+   dto.AthenaResponse updateStaffById(1:dto.CompanyInfo companyInfo, 2:i64 id, 3:dto.StaffInfo staffInfo),
 
    list<dto.StaffInfo> getStaffByDepartmentId(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:i32 pageNum, 4:i32 pageSize),
 

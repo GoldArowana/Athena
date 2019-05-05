@@ -33,4 +33,8 @@ public class StaffFacade {
     public static Long getCountByDepartmentId(long departmentId) throws ServiceNotFoundException, TTransportException {
         return ThriftHelper.call("Athena", StaffService.Client.class, client -> client.getStaffCountByDepartmentId(companyInfo, departmentId));
     }
+
+    public static AthenaResponse updateSelectiveById(long id, StaffInfo staffInfo) throws ServiceNotFoundException, TTransportException {
+        return ThriftHelper.call("Athena", StaffService.Client.class, client -> client.updateStaffById(companyInfo, id, staffInfo));
+    }
 }

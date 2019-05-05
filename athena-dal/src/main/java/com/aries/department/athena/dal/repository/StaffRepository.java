@@ -211,11 +211,11 @@ public class StaffRepository {
         return pinyin + nextId;
     }
 
-    public static boolean updateStaffById(String database, Staff staff) {
+    public static boolean updateStaffById(String database, long id, Staff staff) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             StaffMapper staffMapper = session.getMapper(StaffMapper.class);
-
+            staff.setId(id);
             int effect = staffMapper.updateByPrimaryKeySelective(staff);
 
             return effect > 0;

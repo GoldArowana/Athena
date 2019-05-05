@@ -12,7 +12,6 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.thrift.TException;
 
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -95,7 +94,7 @@ public class StaffServiceImpl implements StaffService.Iface {
     }
 
     @Override
-    public AthenaResponse updateStaffById(CompanyInfo companyInfo, StaffInfo staffInfo) throws TException {
+    public AthenaResponse updateStaffById(CompanyInfo companyInfo, long id, StaffInfo staffInfo) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {
             return companyHelper.getResponse();
@@ -103,7 +102,7 @@ public class StaffServiceImpl implements StaffService.Iface {
 
         Staff staff = conver2Staff(staffInfo);
         try {
-            boolean effect = StaffRepository.updateStaffById(companyHelper.getDatabaseName(), staff);
+            boolean effect = StaffRepository.updateStaffById(companyHelper.getDatabaseName(), id, staff);
             return effect ? SUCCESS.of() : ERROR.of();
         } catch (Exception e) {
             return ERROR.of();
