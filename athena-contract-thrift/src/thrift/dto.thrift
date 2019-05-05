@@ -31,7 +31,7 @@ struct DepartmentInfo {
 struct StaffInfo {
     1:  required i64 id,
     2:  required string fullname, //全名
-    3:  optional i32 aliasName,//别名
+    3:  optional string aliasName,//别名
     4:  optional i16 sex,//性别。0表示未设置。1表示男。2表示女。
     5:  optional string email,
     6:  optional string phone,

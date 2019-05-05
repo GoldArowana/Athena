@@ -23,14 +23,14 @@ public class StaffFacade {
     }
 
     public static AthenaResponse addOne(StaffVO staffVO) throws ServiceNotFoundException, TTransportException {
-        return ThriftHelper.call("Hermes", StaffService.Client.class, client -> client.addStaff(companyInfo, StaffVO.toDTO(staffVO)));
+        return ThriftHelper.call("Athena", StaffService.Client.class, client -> client.addStaff(companyInfo, StaffVO.toDTO(staffVO)));
     }
 
     public static List<StaffInfo> batchQeury(long departmentId, int pageNum, int pageSize) throws ServiceNotFoundException, TTransportException {
-        return ThriftHelper.call("Hermes", StaffService.Client.class, client -> client.getStaffByDepartmentId(companyInfo, departmentId, pageNum, pageSize));
+        return ThriftHelper.call("Athena", StaffService.Client.class, client -> client.getStaffByDepartmentId(companyInfo, departmentId, pageNum, pageSize));
     }
 
     public static Long getCountByDepartmentId(long departmentId) throws ServiceNotFoundException, TTransportException {
-        return ThriftHelper.call("Hermes", StaffService.Client.class, client -> client.getStaffCountByDepartmentId(companyInfo, departmentId));
+        return ThriftHelper.call("Athena", StaffService.Client.class, client -> client.getStaffCountByDepartmentId(companyInfo, departmentId));
     }
 }

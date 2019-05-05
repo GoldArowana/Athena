@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class StaffVO {
     private long id;
     private String fullname;
-    private int aliasName;
+    private String aliasName;
     private short sex;
     private String email;
     private String phone;
@@ -36,7 +36,7 @@ public class StaffVO {
         return fullname;
     }
 
-    public int getAliasName() {
+    public String getAliasName() {
         return aliasName;
     }
 
@@ -107,7 +107,7 @@ public class StaffVO {
 
     public static final class StaffVOBuilder {
         private String fullname;
-        private int aliasName;
+        private String aliasName;
         private short sex;
         private String email;
         private String phone;
@@ -135,7 +135,7 @@ public class StaffVO {
             return this;
         }
 
-        public StaffVOBuilder aliasName(int aliasName) {
+        public StaffVOBuilder aliasName(String aliasName) {
             this.aliasName = aliasName;
             return this;
         }

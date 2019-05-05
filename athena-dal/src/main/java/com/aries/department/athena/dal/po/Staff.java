@@ -10,7 +10,7 @@ public class Staff {
     @Id
     private Long id;
     private String fullname; //全名
-    private Integer aliasName;//别名
+    private String aliasName;//别名
     private Short sex;//性别。0表示未设置。1表示男。2表示女。
     private String email;
     private String phone;

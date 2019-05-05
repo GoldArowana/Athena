@@ -6,6 +6,8 @@ import com.aries.hera.client.thrift.ThriftHelper;
 import org.apache.thrift.TException;
 import org.junit.Test;
 
+import java.util.Collections;
+
 public class StaffServiceTest {
     @Test
     public void pingTest() throws Exception {
@@ -15,16 +17,18 @@ public class StaffServiceTest {
         CompanyInfo companyInfo = new CompanyInfo();
         companyInfo.setName("aries");
         companyInfo.setPassword("123456");
-        Long count = ThriftHelper.call(StaffService.Client.class, client -> {
+        ThriftHelper.call(StaffService.Client.class, client -> {
             try {
-                return client.getStaffCountByDepartmentId(companyInfo, 0L);
+                return client.getStaffByDepartmentId(companyInfo, 0L, 1, 20);
             } catch (TException e) {
                 e.printStackTrace();
-                return 100L;
+                return Collections.emptyList();
             }
         }, "localhost", 6001);
 
-        System.out.println(count);
+
+//        List<StaffInfo> staffInfoList = ThriftHelper.call("Athena", StaffService.Client.class, client -> client.getStaffByDepartmentId(companyInfo, 0L, 1, 20));
+//        System.out.println(staffInfoList);
     }
 
 }
