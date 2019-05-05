@@ -9,6 +9,7 @@ import com.aries.department.athena.dal.repository.StaffRepository;
 import com.aries.department.athena.service.thrift.util.CompanyHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.thrift.TException;
 
 import java.util.Collections;
@@ -132,22 +133,22 @@ public class StaffServiceImpl implements StaffService.Iface {
     private static Staff conver2Staff(StaffInfo staffInfo) {
         Staff staff = new Staff();
 //        staff.setId(staffInfo.getId());
-        staff.setFullname(staffInfo.getFullname());
-        staff.setAliasName(staffInfo.getAliasName());
-        staff.setSex(staffInfo.getSex());
-        staff.setEmail(staffInfo.getEmail());
-        staff.setPhone(staffInfo.getPhone());
-        staff.setQq(staffInfo.getQq());
-        staff.setWechat(staffInfo.getWechat());
-        staff.setJobLevel(staffInfo.getJobLevel());
-        staff.setJobGroup(staffInfo.getJobGroup());
-        staff.setDepartmentId(staffInfo.getDepartmentId());
-        staff.setCountryId(staffInfo.getCountryId());
-        staff.setCityId(staffInfo.getCityId());
-        staff.setGaeaAccount(staffInfo.getGaeaAccount());
-        staff.setEmployeeId(staffInfo.getEmployeeId());
-        staff.setIdentityId(staffInfo.getIdentityId());
-        staff.setAddress(staffInfo.getAddress());
+        staff.setFullname(StringUtils.defaultIfBlank(staffInfo.getFullname(), null));
+        staff.setAliasName(StringUtils.defaultIfBlank(staffInfo.getAliasName(), null));
+        staff.setSex(staffInfo.getSex() == 0 ? null : staffInfo.getSex());
+        staff.setEmail(StringUtils.defaultIfBlank(staffInfo.getEmail(), null));
+        staff.setPhone(StringUtils.defaultIfBlank(staffInfo.getPhone(), null));
+        staff.setQq(StringUtils.defaultIfBlank(staffInfo.getQq(), null));
+        staff.setWechat(StringUtils.defaultIfBlank(staffInfo.getWechat(), null));
+        staff.setJobLevel(StringUtils.defaultIfBlank(staffInfo.getJobLevel(), null));
+        staff.setJobGroup(staffInfo.getJobGroup() == 0 ? null : staffInfo.getJobGroup());
+        staff.setDepartmentId(staffInfo.getDepartmentId() == 0 ? null : staffInfo.getJobGroup());
+        staff.setCountryId(staffInfo.getCountryId() == 0 ? null : staffInfo.getCountryId());
+        staff.setCityId(staffInfo.getCityId() == 0 ? null : staffInfo.getCityId());
+        staff.setGaeaAccount(StringUtils.defaultIfBlank(staffInfo.getGaeaAccount(), null));
+        staff.setEmployeeId(StringUtils.defaultIfBlank(staffInfo.getEmployeeId(), null));
+        staff.setIdentityId(staffInfo.getIdentityId() == 0 ? null : staffInfo.getIdentityId());
+        staff.setAddress(StringUtils.defaultIfBlank(staffInfo.getAddress(), null));
         return staff;
     }
 
