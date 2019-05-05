@@ -132,22 +132,21 @@ public class StaffServiceImpl implements StaffService.Iface {
 
     private static Staff conver2Staff(StaffInfo staffInfo) {
         Staff staff = new Staff();
-//        staff.setId(staffInfo.getId());
         staff.setFullname(StringUtils.defaultIfBlank(staffInfo.getFullname(), null));
         staff.setAliasName(StringUtils.defaultIfBlank(staffInfo.getAliasName(), null));
-        staff.setSex(staffInfo.getSex() == 0 ? null : staffInfo.getSex());
+        staff.setSex(staffInfo.isSetSex() ? staffInfo.getSex() : null);
         staff.setEmail(StringUtils.defaultIfBlank(staffInfo.getEmail(), null));
         staff.setPhone(StringUtils.defaultIfBlank(staffInfo.getPhone(), null));
         staff.setQq(StringUtils.defaultIfBlank(staffInfo.getQq(), null));
         staff.setWechat(StringUtils.defaultIfBlank(staffInfo.getWechat(), null));
         staff.setJobLevel(StringUtils.defaultIfBlank(staffInfo.getJobLevel(), null));
-        staff.setJobGroup(staffInfo.getJobGroup() == 0 ? null : staffInfo.getJobGroup());
-        staff.setDepartmentId(staffInfo.getDepartmentId() == 0 ? null : staffInfo.getJobGroup());
-        staff.setCountryId(staffInfo.getCountryId() == 0 ? null : staffInfo.getCountryId());
-        staff.setCityId(staffInfo.getCityId() == 0 ? null : staffInfo.getCityId());
+        staff.setJobGroup(staffInfo.isSetJobGroup() ? staffInfo.getJobGroup() : null);
+        staff.setDepartmentId(staffInfo.isSetDepartmentId() ? staffInfo.getJobGroup() : null);
+        staff.setCountryId(staffInfo.isSetCountryId() ? staffInfo.getCountryId() : null);
+        staff.setCityId(staffInfo.isSetCityId() ? staffInfo.getCityId() : null);
         staff.setGaeaAccount(StringUtils.defaultIfBlank(staffInfo.getGaeaAccount(), null));
         staff.setEmployeeId(StringUtils.defaultIfBlank(staffInfo.getEmployeeId(), null));
-        staff.setIdentityId(staffInfo.getIdentityId() == 0 ? null : staffInfo.getIdentityId());
+        staff.setIdentityId(staffInfo.isSetIdentityId() ? staffInfo.getIdentityId() : null);
         staff.setAddress(StringUtils.defaultIfBlank(staffInfo.getAddress(), null));
         return staff;
     }

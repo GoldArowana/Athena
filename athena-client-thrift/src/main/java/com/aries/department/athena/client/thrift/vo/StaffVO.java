@@ -234,22 +234,22 @@ public class StaffVO {
 
     public static StaffInfo toDTO(StaffVO staffVO) {
         StaffInfo staffInfo = new StaffInfo();
-        staffInfo.address = staffVO.address;
-        staffInfo.wechat = staffVO.wechat;
-        staffInfo.countryId = staffVO.countryId;
-        staffInfo.cityId = staffVO.cityId;
-        staffInfo.sex = staffVO.sex;
-        staffInfo.employeeId = staffVO.employeeId;
-        staffInfo.onJob = staffVO.onJob;
-        staffInfo.fullname = staffVO.fullname;
-        staffInfo.email = staffVO.email;
-        staffInfo.jobLevel = staffVO.jobLevel;
-        staffInfo.phone = staffVO.phone;
-        staffInfo.jobGroup = staffVO.jobGroup;
-        staffInfo.aliasName = staffVO.aliasName;
-        staffInfo.departmentId = staffVO.departmentId;
-        staffInfo.identityId = staffVO.identityId;
-        staffInfo.qq = staffVO.qq;
+        staffInfo.setAddress(staffVO.address);
+        staffInfo.setWechat(staffVO.wechat);
+        staffInfo.setCountryId(staffVO.countryId);
+        staffInfo.setCityId(staffVO.cityId);
+        staffInfo.setSex(staffVO.sex);
+        staffInfo.setEmployeeId(staffVO.employeeId);
+        staffInfo.setOnJob(staffVO.onJob);
+        staffInfo.setFullname(staffVO.fullname);
+        staffInfo.setEmail(staffVO.email);
+        staffInfo.setJobLevel(staffVO.jobLevel);
+        staffInfo.setPhone(staffVO.phone);
+        staffInfo.setJobGroup(staffVO.jobGroup);
+        staffInfo.setAliasName(staffVO.aliasName);
+        staffInfo.setDepartmentId(staffVO.departmentId);
+        staffInfo.setIdentityId(staffVO.identityId);
+        staffInfo.setQq(staffVO.qq);
         return staffInfo;
     }
 
