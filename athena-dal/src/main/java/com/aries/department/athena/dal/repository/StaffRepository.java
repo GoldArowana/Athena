@@ -69,7 +69,7 @@ public class StaffRepository {
                 }
             }
 
-            return effective > 1 ? SUCCESS.code() : error.code();
+            return effective >= 1 ? SUCCESS.code() : error.code();
         }
     }
 

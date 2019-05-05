@@ -149,8 +149,6 @@ public class StaffServiceImpl implements StaffService.Iface {
         staff.setEmployeeId(staffInfo.getEmployeeId());
         staff.setIdentityId(staffInfo.getIdentityId());
         staff.setAddress(staffInfo.getAddress());
-        staff.setOnJob(staffInfo.isOnJob());
-        staff.setJoinTime(new Date(staffInfo.getJoinTime()));
         return staff;
     }
 
