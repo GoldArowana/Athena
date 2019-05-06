@@ -228,7 +228,9 @@ public class StaffRepository {
             StaffMapper staffMapper = session.getMapper(StaffMapper.class);
 
             Example example = new Example(Staff.class);
-            example.createCriteria().andEqualTo("departmentId", departmentId);
+            if (departmentId > 0) {
+                example.createCriteria().andEqualTo("departmentId", departmentId);
+            }
             example.orderBy("id").asc();
             int offset = (pageNum - 1) * pageSize;
             int limit = pageSize;
