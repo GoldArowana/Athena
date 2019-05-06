@@ -93,6 +93,20 @@ public class DepartmentRepository {
         return Collections.emptyList();
     }
 
+    public static List<Department> getAllDepartments(String databaseName) {
+        try (SqlSession session = SqlSessionUtil.openSession(databaseName)) {
+            // 获取Mapper
+            DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
+
+            List<Department> departments = departmentMapper.selectAll();
+
+            if (CollectionUtils.isNotEmpty(departments)) {
+                return departments;
+            }
+        }
+        return Collections.emptyList();
+    }
+
     /**
      * 根据部门id修改部门名
      *

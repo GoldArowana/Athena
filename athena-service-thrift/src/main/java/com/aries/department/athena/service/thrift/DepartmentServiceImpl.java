@@ -90,6 +90,22 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
     }
 
     @Override
+    public List<DepartmentInfo> getAllDepartments(CompanyInfo companyInfo) throws TException {
+        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
+        if (companyHelper.isError()) {
+            return Collections.emptyList();
+        }
+
+        List<Department> rootDepartments = DepartmentRepository.getAllDepartments(companyHelper.getDatabaseName());
+
+        if (CollectionUtils.isNotEmpty(rootDepartments)) {
+            return conver2DepartmentInfo(rootDepartments);
+        }
+
+        return Collections.emptyList();
+    }
+
+    @Override
     public AthenaResponse updateDepartmentNameById(CompanyInfo companyInfo, long departmentId, String newDepartmentName) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {

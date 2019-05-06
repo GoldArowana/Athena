@@ -33,4 +33,18 @@ public class DepartmentFacade {
     public static List<DepartmentInfo> getSubDepartments(long subDepartmentId) throws ServiceNotFoundException, TTransportException {
         return ThriftHelper.call("Athena", DepartmentService.Client.class, client -> client.getSubDepartments(companyInfo, subDepartmentId));
     }
+
+    public static List<DepartmentInfo> getAllDepartments() throws ServiceNotFoundException, TTransportException {
+        return ThriftHelper.call("Athena", DepartmentService.Client.class, client -> client.getAllDepartments(companyInfo));
+    }
+
+    public static AthenaResponse updateDepartmentNameById(long departmentId, String newDepartmentName) throws ServiceNotFoundException, TTransportException {
+        return ThriftHelper.call("Athena", DepartmentService.Client.class, client -> client.updateDepartmentNameById(companyInfo, departmentId, newDepartmentName));
+    }
+
+    public static AthenaResponse updateSupDepartmentById(long departmentId, long supDepartmentId) throws ServiceNotFoundException, TTransportException {
+        return ThriftHelper.call("Athena", DepartmentService.Client.class, client -> client.updateSupDepartmentById(companyInfo, departmentId, supDepartmentId));
+    }
+
+
 }

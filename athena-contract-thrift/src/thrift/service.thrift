@@ -16,6 +16,8 @@ service DepartmentService {
 
    list<dto.DepartmentInfo> getSubDepartments(1:dto.CompanyInfo companyInfo, 2:i64 subDepartmentId),
 
+   list<dto.DepartmentInfo> getAllDepartments(1:dto.CompanyInfo companyInfo),
+
    dto.AthenaResponse updateDepartmentNameById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:string newDepartmentName),
 
    dto.AthenaResponse updateDepartmentLeaderById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:i64 leaderId),
