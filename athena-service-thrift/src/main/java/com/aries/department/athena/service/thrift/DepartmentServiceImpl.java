@@ -150,6 +150,21 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         }
     }
 
+    @Override
+    public AthenaResponse deleteDepartmentById(CompanyInfo companyInfo, long departmentId) throws TException {
+        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
+        if (companyHelper.isError()) {
+            return companyHelper.getResponse();
+        }
+
+        try {
+            boolean effect = DepartmentRepository.deleteDepartmentById(companyHelper.getDatabaseName(), departmentId);
+            return effect ? SUCCESS.of() : NOT_CHANGED.of();
+        } catch (Exception e) {
+            return ERROR.of();
+        }
+    }
+
 //    @Override
 //    public List<DepartmentInfo> getUnderDepartments(CompanyInfo companyInfo, long departmentId) throws TException {
 //        CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();

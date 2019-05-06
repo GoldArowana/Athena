@@ -170,6 +170,14 @@ public class DepartmentRepository {
         }
     }
 
+
+    public static boolean deleteDepartmentById(String database, Long departmentId) {
+        try (SqlSession session = SqlSessionUtil.openSession(database)) {
+            DepartmentMapper departmentMapper = session.getMapper(DepartmentMapper.class);
+            return departmentMapper.deleteByPrimaryKey(departmentId) > 0;
+        }
+    }
+
 //    public static List<Long> getUnderDepartmentIds(String database, Long departmentId) {
 //        List<Department> departmentList = getUnderDepartments(database, departmentId);
 //        if (CollectionUtils.isEmpty(departmentList)) {

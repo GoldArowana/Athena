@@ -24,6 +24,7 @@ service DepartmentService {
 
    dto.AthenaResponse updateSupDepartmentById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId, 3:i64 supDepartmentId),
 
+   dto.AthenaResponse deleteDepartmentById(1:dto.CompanyInfo companyInfo, 2:i64 departmentId),
 //   list<dto.DepartmentInfo> getUnderDepartments(1:dto.CompanyInfo companyInfo, 2:i64 departmentId),
 }
 
