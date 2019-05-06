@@ -46,5 +46,7 @@ public class DepartmentFacade {
         return ThriftHelper.call("Athena", DepartmentService.Client.class, client -> client.updateSupDepartmentById(companyInfo, departmentId, supDepartmentId));
     }
 
-
+    public static AthenaResponse deleteDepartmentById(long departmentId) throws ServiceNotFoundException, TTransportException {
+        return ThriftHelper.call("Athena", DepartmentService.Client.class, client -> client.deleteDepartmentById(companyInfo, departmentId));
+    }
 }
