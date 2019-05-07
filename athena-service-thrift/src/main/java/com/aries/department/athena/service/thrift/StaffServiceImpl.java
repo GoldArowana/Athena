@@ -197,7 +197,7 @@ public class StaffServiceImpl implements StaffService.Iface {
         staffInfo.setIdentityId(Optional.ofNullable(staff.getIdentityId()).orElse(0));
         staffInfo.setAddress(staff.getAddress());
         staffInfo.setOnJob(Optional.ofNullable(staff.getOnJob()).orElse(true));
-        staffInfo.setJoinTime(staff.getJoinTime().toString());
+        staffInfo.setJoinTime(staff.getJoinTime() != null ? staff.getJoinTime().toString() : null);
         return staffInfo;
     }
 
