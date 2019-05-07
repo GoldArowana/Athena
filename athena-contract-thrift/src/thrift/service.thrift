@@ -35,6 +35,8 @@ service StaffService {
 
    dto.AthenaResponse addStaff(1:dto.CompanyInfo companyInfo, 2:dto.StaffInfo staffInfo),
 
+   dto.StaffInfo addAndGetStaff(1:dto.CompanyInfo companyInfo, 2:dto.StaffInfo staffInfo),
+
    dto.StaffInfo getStaffById(1:dto.CompanyInfo companyInfo, 2:i64 id),
 
    list<dto.StaffInfo> getStaffByName(1:dto.CompanyInfo companyInfo, 2:string name),

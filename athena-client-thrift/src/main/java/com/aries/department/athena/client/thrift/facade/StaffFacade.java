@@ -26,6 +26,11 @@ public class StaffFacade {
         return ThriftHelper.call("Athena", StaffService.Client.class, client -> client.addStaff(companyInfo, StaffVO.toDTO(staffVO)));
     }
 
+    public static StaffVO addAndGet(StaffVO staffVO) throws ServiceNotFoundException, TTransportException {
+        StaffInfo staffInfo = ThriftHelper.call("Athena", StaffService.Client.class, client -> client.addAndGetStaff(companyInfo, StaffVO.toDTO(staffVO)));
+        return StaffVO.buildFromDTO(staffInfo);
+    }
+
     public static List<StaffInfo> batchQeury(long departmentId, int pageNum, int pageSize) throws ServiceNotFoundException, TTransportException {
         return ThriftHelper.call("Athena", StaffService.Client.class, client -> client.getStaffByDepartmentId(companyInfo, departmentId, pageNum, pageSize));
     }
