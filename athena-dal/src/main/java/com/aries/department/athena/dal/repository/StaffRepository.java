@@ -80,7 +80,7 @@ public class StaffRepository {
      * @param id       主键id
      * @return 员工信息
      */
-    public static Staff getStaffById(String database, int id) {
+    public static Staff getStaffById(String database, long id) {
         try (SqlSession session = SqlSessionUtil.openSession(database)) {
             // 获取Mapper
             StaffMapper staffMapper = session.getMapper(StaffMapper.class);

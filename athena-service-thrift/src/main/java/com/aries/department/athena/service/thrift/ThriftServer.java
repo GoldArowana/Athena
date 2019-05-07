@@ -59,7 +59,7 @@ public class ThriftServer {
             serviceInfo.setName(APPNAME);
             serviceInfo.setHost(apphost);
             serviceInfo.setPort(port);
-//            ThriftHelper.call("Hera", DiscoverService.Client.class, client -> client.registe(serviceInfo));
+            ThriftHelper.call("Hera", DiscoverService.Client.class, client -> client.registe(serviceInfo));
             log.info("注册服务, appname:{}, host:{}, port:{}", APPNAME, apphost, port);
         } catch (Exception x) {
             log.error("创建服务失败,error:{}", x.getMessage(), x);

@@ -51,14 +51,17 @@ public class StaffServiceImpl implements StaffService.Iface {
     }
 
     @Override
-    public StaffInfo getStaffById(CompanyInfo companyInfo, int id) throws TException {
+    public StaffInfo getStaffById(CompanyInfo companyInfo, long id) throws TException {
         CompanyHelper companyHelper = new CompanyHelper(companyInfo).invoke();
         if (companyHelper.isError()) {
             return null;
         }
-
-
-        return null;
+        try {
+            Staff staff = StaffRepository.getStaffById(companyHelper.getDatabaseName(), id);
+            return conver2StaffInfo(staff);
+        } catch (Exception e) {
+            throw new TException(e);
+        }
     }
 
     @Override

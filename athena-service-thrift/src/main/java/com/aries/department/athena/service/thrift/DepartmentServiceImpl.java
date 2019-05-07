@@ -178,21 +178,29 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
 
 
     private static Department conver2Department(DepartmentInfo departmentInfo) {
-        return new Department() {{
-            setId(departmentInfo.getId());
-            setUpId(departmentInfo.getUpId());
-            setLeaderId(departmentInfo.getLeaderId());
-            setDepartmentName(departmentInfo.getDepartmentName());
-        }};
+        Department department = new Department();
+        if (departmentInfo.isSetId()) {
+            department.setId(departmentInfo.getId());
+        }
+        if (departmentInfo.isSetUpId()) {
+            department.setUpId(departmentInfo.getUpId());
+        }
+        if (departmentInfo.isSetLeaderId()) {
+            department.setLeaderId(departmentInfo.getLeaderId());
+        }
+        if (departmentInfo.isSetDepartmentName()) {
+            department.setDepartmentName(departmentInfo.getDepartmentName());
+        }
+        return department;
     }
 
     private static DepartmentInfo conver2DepartmentInfo(Department department) {
-        return new DepartmentInfo() {{
-            setId(Optional.ofNullable(department.getId()).orElse(0L));
-            setUpId(Optional.ofNullable(department.getUpId()).orElse(0L));
-            setLeaderId(Optional.ofNullable(department.getLeaderId()).orElse(0L));
-            setDepartmentName(department.getDepartmentName());
-        }};
+        DepartmentInfo departmentInfo = new DepartmentInfo();
+        departmentInfo.setId(Optional.ofNullable(department.getId()).orElse(0L));
+        departmentInfo.setUpId(Optional.ofNullable(department.getUpId()).orElse(0L));
+        departmentInfo.setLeaderId(Optional.ofNullable(department.getLeaderId()).orElse(0L));
+        departmentInfo.setDepartmentName(department.getDepartmentName());
+        return departmentInfo;
     }
 
     private static List<DepartmentInfo> conver2DepartmentInfo(List<Department> departments) {
