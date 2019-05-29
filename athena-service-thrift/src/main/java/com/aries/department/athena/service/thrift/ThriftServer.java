@@ -3,9 +3,8 @@ package com.aries.department.athena.service.thrift;
 import com.aries.department.athena.contract.thrift.service.DepartmentService;
 import com.aries.department.athena.contract.thrift.service.StaffService;
 import com.aries.department.athena.core.utils.PropertiesProxy;
-import com.aries.hera.client.thrift.ThriftHelper;
+import com.aries.hera.client.thrift.DiscoverClient;
 import com.aries.hera.contract.thrift.dto.ServiceInfo;
-import com.aries.hera.contract.thrift.service.DiscoverService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.thrift.TMultiplexedProcessor;
 import org.apache.thrift.server.TServer;
@@ -13,7 +12,8 @@ import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TServerTransport;
 
-import static com.aries.department.athena.core.constant.ServerNameConst.*;
+import static com.aries.department.athena.core.constant.AppConst.APPNAME;
+import static com.aries.department.athena.core.constant.AppConst.PORT;
 
 @Slf4j
 public class ThriftServer {
@@ -24,23 +24,22 @@ public class ThriftServer {
 
             { // 准备注册 DepartmentService
                 DepartmentService.Iface departmentService = new DepartmentServiceImpl();
-                DepartmentService.Processor departmentProcessor = new DepartmentService.Processor(departmentService);
-                processor.registerProcessor(DEPARTMENT, departmentProcessor);
+                DepartmentService.Processor departmentProcessor = new DepartmentService.Processor<>(departmentService);
+                String simpleName = DepartmentService.class.getSimpleName();
+                processor.registerProcessor(simpleName, departmentProcessor);
             }
 
             { // 准备注册 StaffService
                 StaffService.Iface staffService = new StaffServiceImpl();
-                StaffService.Processor staffProcessor = new StaffService.Processor(staffService);
-                processor.registerProcessor(STAFF, staffProcessor);
+                StaffService.Processor staffProcessor = new StaffService.Processor<>(staffService);
+                String simpleName = StaffService.class.getSimpleName();
+                processor.registerProcessor(simpleName, staffProcessor);
             }
 
-            // 从配置文件获取端口 6001
-            PropertiesProxy propertiesProxy = new PropertiesProxy("athena-service.properties");
-            int port = Integer.parseInt(propertiesProxy.readProperty("port"));
             // 设置端口
-            TServerTransport serverTransport = new TServerSocket(port);
+            TServerTransport serverTransport = new TServerSocket(PORT);
             TServer server = new TSimpleServer(new TServer.Args(serverTransport).processor(processor));
-            log.info("服务启动,端口:{}", port);
+            log.info("服务启动,端口:{}", PORT);
 
             // 用新线程开启服务。
             new Thread(() -> {
@@ -53,14 +52,11 @@ public class ThriftServer {
 
 
             // 注册服务
-            PropertiesProxy heraProperties = new PropertiesProxy("hera-reg-service.properties");
-            String apphost = heraProperties.readProperty("apphost");
-            ServiceInfo serviceInfo = new ServiceInfo();
-            serviceInfo.setName(APPNAME);
-            serviceInfo.setHost(apphost);
-            serviceInfo.setPort(port);
-            ThriftHelper.call("Hera", DiscoverService.Client.class, client -> client.registe(serviceInfo));
-            log.info("注册服务, appname:{}, host:{}, port:{}", APPNAME, apphost, port);
+            PropertiesProxy heraProperties = new PropertiesProxy("/opt/config/local.properties");
+            String apphost = heraProperties.readProperty("host");
+
+            DiscoverClient.registe(new ServiceInfo(APPNAME, apphost, PORT));
+            log.info("注册服务, appname:{}, host:{}, port:{}", APPNAME, apphost, PORT);
         } catch (Exception x) {
             log.error("创建服务失败,error:{}", x.getMessage(), x);
         }
