@@ -1,5 +1,6 @@
 package com.aries.department.athena.service.thrift;
 
+import com.aries.department.athena.contract.thrift.service.DailySignService;
 import com.aries.department.athena.contract.thrift.service.DepartmentService;
 import com.aries.department.athena.contract.thrift.service.StaffService;
 import com.aries.department.athena.core.utils.PropertiesProxy;
@@ -34,6 +35,13 @@ public class ThriftServer {
                 StaffService.Processor staffProcessor = new StaffService.Processor<>(staffService);
                 String simpleName = StaffService.class.getSimpleName();
                 processor.registerProcessor(simpleName, staffProcessor);
+            }
+
+            { // 准备注册 DailySignService
+                DailySignService.Iface dailySignService = new DailySignServiceImpl();
+                DailySignService.Processor dailySignProcessor = new DailySignService.Processor<>(dailySignService);
+                String simpleName = DailySignService.class.getSimpleName();
+                processor.registerProcessor(simpleName, dailySignProcessor);
             }
 
             // 设置端口

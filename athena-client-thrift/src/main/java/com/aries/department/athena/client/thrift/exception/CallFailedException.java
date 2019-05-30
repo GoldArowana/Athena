@@ -1,6 +1,6 @@
 package com.aries.department.athena.client.thrift.exception;
 
-public class CallFailedException extends Exception {
+public class CallFailedException extends RuntimeException {
     public CallFailedException() {
     }
 

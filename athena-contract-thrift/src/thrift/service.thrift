@@ -51,3 +51,17 @@ service StaffService {
 
    i64 getStaffCountByDepartmentId(1:dto.CompanyInfo companyInfo, 2:i64 departmentId),
 }
+
+service DailySignService {
+
+   //用于检测client-server之间通讯是否正常
+   string ping(),
+
+   bool addSignNow(1:dto.CompanyInfo companyInfo, 2:i64 staffId),
+
+   bool hasSigned(1:dto.CompanyInfo companyInfo, 2:i64 staffId, 3:i64 startTimeMills, 4:i64 endTimeMills),
+
+   bool signNowIfNotSignedInPeriod(1:dto.CompanyInfo companyInfo, 2:i64 staffId, 3:i64 startTimeMills, 4:i64 endTimeMills),
+
+   list<i64> getSignList(1:dto.CompanyInfo companyInfo, 2:i64 staffId, 3:i64 startTimeMills, 4:i64 endTimeMills),
+}

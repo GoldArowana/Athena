@@ -21,7 +21,6 @@ import static com.aries.department.athena.service.thrift.constant.AthenaResponse
 @Slf4j
 public class DepartmentServiceImpl implements DepartmentService.Iface {
 
-
     @Override
     public String ping() {
         log.debug("[pong- -.]");
@@ -35,7 +34,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
             return companyHelper.getResponse();
         }
 
-        Department department = conver2Department(departmentInfo);
+        Department department = convert2Department(departmentInfo);
 
         try {
             boolean effect = DepartmentRepository.addDepartment(companyHelper.getDatabaseName(), department);
@@ -54,7 +53,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
 
         Department department = DepartmentRepository.getDepartmentById(companyHelper.getDatabaseName(), departmentId);
 
-        return conver2DepartmentInfo(department);
+        return convert2DepartmentInfo(department);
     }
 
     @Override
@@ -67,7 +66,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         List<Department> rootDepartments = DepartmentRepository.getRootDepartments(companyHelper.getDatabaseName());
 
         if (CollectionUtils.isNotEmpty(rootDepartments)) {
-            return conver2DepartmentInfo(rootDepartments);
+            return convert2DepartmentInfo(rootDepartments);
         }
 
         return Collections.emptyList();
@@ -83,7 +82,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         List<Department> rootDepartments = DepartmentRepository.getSubDepartments(companyHelper.getDatabaseName(), subDepartmentId);
 
         if (CollectionUtils.isNotEmpty(rootDepartments)) {
-            return conver2DepartmentInfo(rootDepartments);
+            return convert2DepartmentInfo(rootDepartments);
         }
 
         return Collections.emptyList();
@@ -99,7 +98,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         List<Department> rootDepartments = DepartmentRepository.getAllDepartments(companyHelper.getDatabaseName());
 
         if (CollectionUtils.isNotEmpty(rootDepartments)) {
-            return conver2DepartmentInfo(rootDepartments);
+            return convert2DepartmentInfo(rootDepartments);
         }
 
         return Collections.emptyList();
@@ -173,11 +172,11 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
 //        }
 //
 //        List<Department> departmentList = DepartmentRepository.gets(companyHelper.getDatabaseName(), departmentId);
-//        return conver2DepartmentInfo(departmentList);
+//        return convert2DepartmentInfo(departmentList);
 //    }
 
 
-    private static Department conver2Department(DepartmentInfo departmentInfo) {
+    private static Department convert2Department(DepartmentInfo departmentInfo) {
         Department department = new Department();
         if (departmentInfo.isSetId()) {
             department.setId(departmentInfo.getId());
@@ -194,7 +193,7 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         return department;
     }
 
-    private static DepartmentInfo conver2DepartmentInfo(Department department) {
+    private static DepartmentInfo convert2DepartmentInfo(Department department) {
         DepartmentInfo departmentInfo = new DepartmentInfo();
         departmentInfo.setId(Optional.ofNullable(department.getId()).orElse(0L));
         departmentInfo.setUpId(Optional.ofNullable(department.getUpId()).orElse(0L));
@@ -203,13 +202,13 @@ public class DepartmentServiceImpl implements DepartmentService.Iface {
         return departmentInfo;
     }
 
-    private static List<DepartmentInfo> conver2DepartmentInfo(List<Department> departments) {
+    private static List<DepartmentInfo> convert2DepartmentInfo(List<Department> departments) {
         if (CollectionUtils.isEmpty(departments)) {
             return Collections.emptyList();
         }
 
         return departments.stream()
-                .map(DepartmentServiceImpl::conver2DepartmentInfo)
+                .map(DepartmentServiceImpl::convert2DepartmentInfo)
                 .collect(Collectors.toList());
     }
 }

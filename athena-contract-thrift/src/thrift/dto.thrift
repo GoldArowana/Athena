@@ -49,3 +49,9 @@ struct StaffInfo {
     18: optional string address,//现住址
     19: optional string joinTime//入职时间
 }
+
+//struct SignInfo {
+//    1:  optional i64 id,
+//    2:  optional i64 staffId,
+//    3:  optional String insertTime,
+//}
