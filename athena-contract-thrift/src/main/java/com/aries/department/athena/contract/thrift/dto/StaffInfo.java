@@ -66,7 +66,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
     public @org.apache.thrift.annotation.Nullable
     java.lang.String joinTime; // optional
 
-    /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+    /**
+     * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+     */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
         ID((short) 1, "id"),
         FULLNAME((short) 2, "fullname"),
@@ -337,7 +339,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ID_ISSET_ID);
     }
 
-    /** Returns true if field id is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field id is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ID_ISSET_ID);
     }
@@ -360,7 +364,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.fullname = null;
     }
 
-    /** Returns true if field fullname is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field fullname is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetFullname() {
         return this.fullname != null;
     }
@@ -385,7 +391,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.aliasName = null;
     }
 
-    /** Returns true if field aliasName is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field aliasName is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetAliasName() {
         return this.aliasName != null;
     }
@@ -410,7 +418,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __SEX_ISSET_ID);
     }
 
-    /** Returns true if field sex is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field sex is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetSex() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __SEX_ISSET_ID);
     }
@@ -433,7 +443,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.email = null;
     }
 
-    /** Returns true if field email is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field email is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetEmail() {
         return this.email != null;
     }
@@ -458,7 +470,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.phone = null;
     }
 
-    /** Returns true if field phone is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field phone is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetPhone() {
         return this.phone != null;
     }
@@ -483,7 +497,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.qq = null;
     }
 
-    /** Returns true if field qq is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field qq is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetQq() {
         return this.qq != null;
     }
@@ -508,7 +524,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.wechat = null;
     }
 
-    /** Returns true if field wechat is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field wechat is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetWechat() {
         return this.wechat != null;
     }
@@ -533,7 +551,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.jobLevel = null;
     }
 
-    /** Returns true if field jobLevel is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field jobLevel is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetJobLevel() {
         return this.jobLevel != null;
     }
@@ -558,7 +578,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __JOBGROUP_ISSET_ID);
     }
 
-    /** Returns true if field jobGroup is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field jobGroup is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetJobGroup() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __JOBGROUP_ISSET_ID);
     }
@@ -581,7 +603,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ONJOB_ISSET_ID);
     }
 
-    /** Returns true if field onJob is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field onJob is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetOnJob() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ONJOB_ISSET_ID);
     }
@@ -604,7 +628,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __DEPARTMENTID_ISSET_ID);
     }
 
-    /** Returns true if field departmentId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field departmentId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetDepartmentId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __DEPARTMENTID_ISSET_ID);
     }
@@ -627,7 +653,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COUNTRYID_ISSET_ID);
     }
 
-    /** Returns true if field countryId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field countryId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetCountryId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COUNTRYID_ISSET_ID);
     }
@@ -650,7 +678,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __CITYID_ISSET_ID);
     }
 
-    /** Returns true if field cityId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field cityId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetCityId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __CITYID_ISSET_ID);
     }
@@ -673,7 +703,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.gaeaAccount = null;
     }
 
-    /** Returns true if field gaeaAccount is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field gaeaAccount is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetGaeaAccount() {
         return this.gaeaAccount != null;
     }
@@ -698,7 +730,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.employeeId = null;
     }
 
-    /** Returns true if field employeeId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field employeeId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetEmployeeId() {
         return this.employeeId != null;
     }
@@ -723,7 +757,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __IDENTITYID_ISSET_ID);
     }
 
-    /** Returns true if field identityId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field identityId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetIdentityId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __IDENTITYID_ISSET_ID);
     }
@@ -746,7 +782,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.address = null;
     }
 
-    /** Returns true if field address is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field address is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetAddress() {
         return this.address != null;
     }
@@ -771,7 +809,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         this.joinTime = null;
     }
 
-    /** Returns true if field joinTime is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field joinTime is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetJoinTime() {
         return this.joinTime != null;
     }
@@ -1003,7 +1043,9 @@ public class StaffInfo implements org.apache.thrift.TBase<StaffInfo, StaffInfo._
         throw new java.lang.IllegalStateException();
     }
 
-    /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+     */
     public boolean isSet(_Fields field) {
         if (field == null) {
             throw new java.lang.IllegalArgumentException();

@@ -164,6 +164,7 @@ public class StaffServiceImpl implements StaffService.Iface {
         staff.setPhone(StringUtils.defaultIfBlank(staffInfo.getPhone(), null));
         staff.setQq(StringUtils.defaultIfBlank(staffInfo.getQq(), null));
         staff.setWechat(StringUtils.defaultIfBlank(staffInfo.getWechat(), null));
+        staff.setOnJob(staffInfo.isOnJob());
         staff.setJobLevel(StringUtils.defaultIfBlank(staffInfo.getJobLevel(), null));
         staff.setJobGroup(staffInfo.isSetJobGroup() ? staffInfo.getJobGroup() : null);
         staff.setDepartmentId(staffInfo.isSetDepartmentId() ? staffInfo.getJobGroup() : null);

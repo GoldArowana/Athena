@@ -26,7 +26,9 @@ public class DepartmentInfo implements org.apache.thrift.TBase<DepartmentInfo, D
     public long leaderId; // required
     public long upId; // required
 
-    /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+    /**
+     * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+     */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
         ID((short) 1, "id"),
         DEPARTMENT_NAME((short) 2, "departmentName"),
@@ -176,7 +178,9 @@ public class DepartmentInfo implements org.apache.thrift.TBase<DepartmentInfo, D
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ID_ISSET_ID);
     }
 
-    /** Returns true if field id is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field id is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ID_ISSET_ID);
     }
@@ -199,7 +203,9 @@ public class DepartmentInfo implements org.apache.thrift.TBase<DepartmentInfo, D
         this.departmentName = null;
     }
 
-    /** Returns true if field departmentName is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field departmentName is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetDepartmentName() {
         return this.departmentName != null;
     }
@@ -224,7 +230,9 @@ public class DepartmentInfo implements org.apache.thrift.TBase<DepartmentInfo, D
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __LEADERID_ISSET_ID);
     }
 
-    /** Returns true if field leaderId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field leaderId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetLeaderId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __LEADERID_ISSET_ID);
     }
@@ -247,7 +255,9 @@ public class DepartmentInfo implements org.apache.thrift.TBase<DepartmentInfo, D
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __UPID_ISSET_ID);
     }
 
-    /** Returns true if field upId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field upId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetUpId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __UPID_ISSET_ID);
     }
@@ -312,7 +322,9 @@ public class DepartmentInfo implements org.apache.thrift.TBase<DepartmentInfo, D
         throw new java.lang.IllegalStateException();
     }
 
-    /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+     */
     public boolean isSet(_Fields field) {
         if (field == null) {
             throw new java.lang.IllegalArgumentException();

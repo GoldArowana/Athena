@@ -36,7 +36,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
     public @org.apache.thrift.annotation.Nullable
     java.lang.String updateTime; // required
 
-    /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+    /**
+     * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+     */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
         ID((short) 1, "id"),
         COMPANY_ID((short) 2, "companyId"),
@@ -218,7 +220,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ID_ISSET_ID);
     }
 
-    /** Returns true if field id is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field id is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ID_ISSET_ID);
     }
@@ -241,7 +245,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __COMPANYID_ISSET_ID);
     }
 
-    /** Returns true if field companyId is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field companyId is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetCompanyId() {
         return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __COMPANYID_ISSET_ID);
     }
@@ -264,7 +270,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         this.companyName = null;
     }
 
-    /** Returns true if field companyName is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field companyName is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetCompanyName() {
         return this.companyName != null;
     }
@@ -289,7 +297,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         this.password = null;
     }
 
-    /** Returns true if field password is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field password is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetPassword() {
         return this.password != null;
     }
@@ -314,7 +324,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         this.keyword = null;
     }
 
-    /** Returns true if field keyword is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field keyword is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetKeyword() {
         return this.keyword != null;
     }
@@ -339,7 +351,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         this.insertTime = null;
     }
 
-    /** Returns true if field insertTime is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field insertTime is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetInsertTime() {
         return this.insertTime != null;
     }
@@ -364,7 +378,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         this.updateTime = null;
     }
 
-    /** Returns true if field updateTime is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field updateTime is set (has been assigned a value) and false otherwise
+     */
     public boolean isSetUpdateTime() {
         return this.updateTime != null;
     }
@@ -464,7 +480,9 @@ public class PartnerInfo implements org.apache.thrift.TBase<PartnerInfo, Partner
         throw new java.lang.IllegalStateException();
     }
 
-    /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+    /**
+     * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+     */
     public boolean isSet(_Fields field) {
         if (field == null) {
             throw new java.lang.IllegalArgumentException();

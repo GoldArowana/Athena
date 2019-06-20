@@ -4,5 +4,5 @@ import com.aries.department.athena.dal.po.Partner;
 import tk.mybatis.mapper.common.Mapper;
 
 public interface PartnerMapper extends Mapper<Partner> {
-//    Stu getStuById(int id);
+    Partner getPartnerById(int id);
 }

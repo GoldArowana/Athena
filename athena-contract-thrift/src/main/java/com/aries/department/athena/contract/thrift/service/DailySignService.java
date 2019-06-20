@@ -877,7 +877,9 @@ public class DailySignService {
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new ping_argsTupleSchemeFactory();
 
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             ;
 
@@ -973,7 +975,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -1136,7 +1140,9 @@ public class DailySignService {
         public @org.apache.thrift.annotation.Nullable
         java.lang.String success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -1249,7 +1255,9 @@ public class DailySignService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -1283,7 +1291,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -1506,7 +1516,9 @@ public class DailySignService {
         com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo; // required
         public long staffId; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             STAFF_ID((short) 2, "staffId");
@@ -1633,7 +1645,9 @@ public class DailySignService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -1658,7 +1672,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
 
-        /** Returns true if field staffId is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field staffId is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStaffId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
@@ -1701,7 +1717,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -1976,7 +1994,9 @@ public class DailySignService {
 
         public boolean success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -2092,7 +2112,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
@@ -2124,7 +2146,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -2347,7 +2371,9 @@ public class DailySignService {
         public long startTimeMills; // required
         public long endTimeMills; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             STAFF_ID((short) 2, "staffId"),
@@ -2498,7 +2524,9 @@ public class DailySignService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -2523,7 +2551,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
 
-        /** Returns true if field staffId is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field staffId is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStaffId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
@@ -2546,7 +2576,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __STARTTIMEMILLS_ISSET_ID);
         }
 
-        /** Returns true if field startTimeMills is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field startTimeMills is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStartTimeMills() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __STARTTIMEMILLS_ISSET_ID);
         }
@@ -2569,7 +2601,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ENDTIMEMILLS_ISSET_ID);
         }
 
-        /** Returns true if field endTimeMills is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field endTimeMills is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetEndTimeMills() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ENDTIMEMILLS_ISSET_ID);
         }
@@ -2634,7 +2668,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -3005,7 +3041,9 @@ public class DailySignService {
 
         public boolean success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -3121,7 +3159,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
@@ -3153,7 +3193,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -3376,7 +3418,9 @@ public class DailySignService {
         public long startTimeMills; // required
         public long endTimeMills; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             STAFF_ID((short) 2, "staffId"),
@@ -3527,7 +3571,9 @@ public class DailySignService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -3552,7 +3598,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
 
-        /** Returns true if field staffId is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field staffId is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStaffId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
@@ -3575,7 +3623,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __STARTTIMEMILLS_ISSET_ID);
         }
 
-        /** Returns true if field startTimeMills is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field startTimeMills is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStartTimeMills() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __STARTTIMEMILLS_ISSET_ID);
         }
@@ -3598,7 +3648,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ENDTIMEMILLS_ISSET_ID);
         }
 
-        /** Returns true if field endTimeMills is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field endTimeMills is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetEndTimeMills() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ENDTIMEMILLS_ISSET_ID);
         }
@@ -3663,7 +3715,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -4034,7 +4088,9 @@ public class DailySignService {
 
         public boolean success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -4150,7 +4206,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
@@ -4182,7 +4240,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -4405,7 +4465,9 @@ public class DailySignService {
         public long startTimeMills; // required
         public long endTimeMills; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             STAFF_ID((short) 2, "staffId"),
@@ -4556,7 +4618,9 @@ public class DailySignService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -4581,7 +4645,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
 
-        /** Returns true if field staffId is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field staffId is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStaffId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __STAFFID_ISSET_ID);
         }
@@ -4604,7 +4670,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __STARTTIMEMILLS_ISSET_ID);
         }
 
-        /** Returns true if field startTimeMills is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field startTimeMills is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStartTimeMills() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __STARTTIMEMILLS_ISSET_ID);
         }
@@ -4627,7 +4695,9 @@ public class DailySignService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ENDTIMEMILLS_ISSET_ID);
         }
 
-        /** Returns true if field endTimeMills is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field endTimeMills is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetEndTimeMills() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ENDTIMEMILLS_ISSET_ID);
         }
@@ -4692,7 +4762,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -5064,7 +5136,9 @@ public class DailySignService {
         public @org.apache.thrift.annotation.Nullable
         java.util.List<java.lang.Long> success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -5195,7 +5269,9 @@ public class DailySignService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -5229,7 +5305,9 @@ public class DailySignService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();

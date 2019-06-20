@@ -1611,7 +1611,9 @@ public class StaffService {
         private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new ping_argsTupleSchemeFactory();
 
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             ;
 
@@ -1707,7 +1709,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -1870,7 +1874,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         java.lang.String success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -1983,7 +1989,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -2017,7 +2025,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -2241,7 +2251,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             STAFF_INFO((short) 2, "staffInfo");
@@ -2365,7 +2377,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -2390,7 +2404,9 @@ public class StaffService {
             this.staffInfo = null;
         }
 
-        /** Returns true if field staffInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field staffInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStaffInfo() {
             return this.staffInfo != null;
         }
@@ -2435,7 +2451,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -2722,7 +2740,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.AthenaResponse success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -2835,7 +2855,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -2869,7 +2891,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -3098,7 +3122,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             STAFF_INFO((short) 2, "staffInfo");
@@ -3222,7 +3248,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -3247,7 +3275,9 @@ public class StaffService {
             this.staffInfo = null;
         }
 
-        /** Returns true if field staffInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field staffInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStaffInfo() {
             return this.staffInfo != null;
         }
@@ -3292,7 +3322,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -3579,7 +3611,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.StaffInfo success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -3692,7 +3726,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -3726,7 +3762,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -3954,7 +3992,9 @@ public class StaffService {
         com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo; // required
         public long id; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             ID((short) 2, "id");
@@ -4081,7 +4121,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -4106,7 +4148,9 @@ public class StaffService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ID_ISSET_ID);
         }
 
-        /** Returns true if field id is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field id is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ID_ISSET_ID);
         }
@@ -4149,7 +4193,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -4425,7 +4471,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.StaffInfo success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -4538,7 +4586,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -4572,7 +4622,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -4801,7 +4853,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         java.lang.String name; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             NAME((short) 2, "name");
@@ -4925,7 +4979,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -4950,7 +5006,9 @@ public class StaffService {
             this.name = null;
         }
 
-        /** Returns true if field name is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field name is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetName() {
             return this.name != null;
         }
@@ -4995,7 +5053,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -5277,7 +5337,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -5411,7 +5473,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -5445,7 +5509,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -5699,7 +5765,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         java.lang.String pinyin; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             PINYIN((short) 2, "pinyin");
@@ -5823,7 +5891,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -5848,7 +5918,9 @@ public class StaffService {
             this.pinyin = null;
         }
 
-        /** Returns true if field pinyin is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field pinyin is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetPinyin() {
             return this.pinyin != null;
         }
@@ -5893,7 +5965,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -6175,7 +6249,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -6309,7 +6385,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -6343,7 +6421,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -6597,7 +6677,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         java.lang.String pinyin; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             PINYIN((short) 2, "pinyin");
@@ -6721,7 +6803,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -6746,7 +6830,9 @@ public class StaffService {
             this.pinyin = null;
         }
 
-        /** Returns true if field pinyin is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field pinyin is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetPinyin() {
             return this.pinyin != null;
         }
@@ -6791,7 +6877,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -7073,7 +7161,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.StaffInfo success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -7186,7 +7276,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -7220,7 +7312,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -7451,7 +7545,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.StaffInfo staffInfo; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             ID((short) 2, "id"),
@@ -7589,7 +7685,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -7614,7 +7712,9 @@ public class StaffService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __ID_ISSET_ID);
         }
 
-        /** Returns true if field id is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field id is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __ID_ISSET_ID);
         }
@@ -7637,7 +7737,9 @@ public class StaffService {
             this.staffInfo = null;
         }
 
-        /** Returns true if field staffInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field staffInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetStaffInfo() {
             return this.staffInfo != null;
         }
@@ -7693,7 +7795,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -8030,7 +8134,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         com.aries.department.athena.contract.thrift.dto.AthenaResponse success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -8143,7 +8249,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -8177,7 +8285,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -8409,7 +8519,9 @@ public class StaffService {
         public int pageNum; // required
         public int pageSize; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             DEPARTMENT_ID((short) 2, "departmentId"),
@@ -8560,7 +8672,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -8585,7 +8699,9 @@ public class StaffService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __DEPARTMENTID_ISSET_ID);
         }
 
-        /** Returns true if field departmentId is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field departmentId is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetDepartmentId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __DEPARTMENTID_ISSET_ID);
         }
@@ -8608,7 +8724,9 @@ public class StaffService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __PAGENUM_ISSET_ID);
         }
 
-        /** Returns true if field pageNum is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field pageNum is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetPageNum() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __PAGENUM_ISSET_ID);
         }
@@ -8631,7 +8749,9 @@ public class StaffService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __PAGESIZE_ISSET_ID);
         }
 
-        /** Returns true if field pageSize is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field pageSize is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetPageSize() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __PAGESIZE_ISSET_ID);
         }
@@ -8696,7 +8816,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -9068,7 +9190,9 @@ public class StaffService {
         public @org.apache.thrift.annotation.Nullable
         java.util.List<com.aries.department.athena.contract.thrift.dto.StaffInfo> success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -9202,7 +9326,9 @@ public class StaffService {
             this.success = null;
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return this.success != null;
         }
@@ -9236,7 +9362,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -9489,7 +9617,9 @@ public class StaffService {
         com.aries.department.athena.contract.thrift.dto.CompanyInfo companyInfo; // required
         public long departmentId; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             COMPANY_INFO((short) 1, "companyInfo"),
             DEPARTMENT_ID((short) 2, "departmentId");
@@ -9616,7 +9746,9 @@ public class StaffService {
             this.companyInfo = null;
         }
 
-        /** Returns true if field companyInfo is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field companyInfo is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetCompanyInfo() {
             return this.companyInfo != null;
         }
@@ -9641,7 +9773,9 @@ public class StaffService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __DEPARTMENTID_ISSET_ID);
         }
 
-        /** Returns true if field departmentId is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field departmentId is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetDepartmentId() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __DEPARTMENTID_ISSET_ID);
         }
@@ -9684,7 +9818,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
@@ -9959,7 +10095,9 @@ public class StaffService {
 
         public long success; // required
 
-        /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
+        /**
+         * The set of fields this struct contains, along with convenience methods for finding and manipulating them.
+         */
         public enum _Fields implements org.apache.thrift.TFieldIdEnum {
             SUCCESS((short) 0, "success");
 
@@ -10075,7 +10213,9 @@ public class StaffService {
             __isset_bitfield = org.apache.thrift.EncodingUtils.clearBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
 
-        /** Returns true if field success is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field success is set (has been assigned a value) and false otherwise
+         */
         public boolean isSetSuccess() {
             return org.apache.thrift.EncodingUtils.testBit(__isset_bitfield, __SUCCESS_ISSET_ID);
         }
@@ -10107,7 +10247,9 @@ public class StaffService {
             throw new java.lang.IllegalStateException();
         }
 
-        /** Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise */
+        /**
+         * Returns true if field corresponding to fieldID is set (has been assigned a value) and false otherwise
+         */
         public boolean isSet(_Fields field) {
             if (field == null) {
                 throw new java.lang.IllegalArgumentException();
