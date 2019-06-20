@@ -231,6 +231,7 @@ public class StaffRepository {
             if (departmentId > 0) {
                 example.createCriteria().andEqualTo("departmentId", departmentId);
             }
+            example.orderBy("onJob").desc();
             example.orderBy("id").asc();
             int offset = (pageNum - 1) * pageSize;
             int limit = pageSize;
